@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="it_IT" />
   <meta property="og:title" content="Azienda Agricola Moretti" />
-  <meta property="og:description" content="Contatti, indicazioni, social e shop ufficiale" />
+  <meta property="og:description" content="Contatti, indicazioni, social e sito ufficiale" />
   <meta property="og:url" content="https://azienda-agricola-moretti.github.io/azienda-agricola-moretti/" />
   <meta property="og:image" content="https://azienda-agricola-moretti.github.io/azienda-agricola-moretti/og.jpg" />
 
@@ -25,8 +25,6 @@
   <style>
     :root{
       --brand:#2C1C14;
-      --olive:#6F7C4B;
-
       --bg:#FFFFFF;
       --cream:#FBF8F5;
       --card:#FFFFFF;
@@ -73,7 +71,6 @@
       height:auto;
       max-height:92px;
       object-fit:contain;
-      transform: translateZ(0);
     }
 
     .hero{
@@ -154,7 +151,6 @@
       backdrop-filter: blur(8px);
     }
 
-    /* CTA 4 slot */
     .actions{
       padding:14px 18px 18px;
       display:grid;
@@ -185,12 +181,11 @@
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
-      text-align:center;
       cursor:pointer;
     }
     .btn:hover{box-shadow:var(--shadow2); transform:translateY(-1px); border-color: rgba(44,28,20,.20)}
     .btn:active{transform:translateY(0px); box-shadow:0 8px 18px rgba(11,18,32,.10)}
-    .btn:focus{outline:3px solid var(--focus); outline-offset:2px}
+    .btn:focus{outline:3px solid rgba(44,28,20,.18); outline-offset:2px}
 
     .btn.primary{
       background:var(--brand);
@@ -245,6 +240,9 @@
     .tile b{display:block; font-weight:900; color:var(--brand);}
     .small{color:rgba(78,74,69,.85);font-size:13px;margin-top:4px;line-height:1.45;font-weight:600}
 
+    .tile a{color:inherit;text-decoration:none}
+    .tile a:hover{text-decoration:underline}
+
     .i{
       width:20px;height:20px;
       stroke: var(--brand);
@@ -265,7 +263,6 @@
       color: currentColor;
     }
 
-    /* Video */
     .video{
       margin:14px auto 0;
       max-width: 600px;
@@ -284,19 +281,13 @@
       .video iframe{height: 280px;}
     }
 
-    /* Social */
     .social-row{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap:12px;
       width:100%;
     }
-    .socwrap{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:6px;
-    }
+    .socwrap{display:flex;flex-direction:column;align-items:center;gap:6px}
     .soc{
       width:100%;
       height:48px;
@@ -323,10 +314,8 @@
       font-size:12px;
       font-weight:900;
       color:rgba(78,74,69,.78);
-      letter-spacing:.01em;
     }
 
-    /* Sticky: WhatsApp / Chiama / Naviga */
     .sticky{
       position:fixed;
       left:0; right:0; bottom:0;
@@ -356,11 +345,10 @@
       font-weight:900;
       text-decoration:none;
       box-shadow:0 10px 20px rgba(11,18,32,.08);
-      min-width:0;
+      font-size:14px;
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
-      font-size:14px;
     }
     .sbtn.primary{
       background:var(--brand);
@@ -387,22 +375,21 @@
       <div class="hero">
         <h1>Azienda Agricola Moretti</h1>
         <div class="divider"></div>
-        <div class="qrhint">📲 Scansiona per contatti, ordini e indicazioni</div>
+        <div class="qrhint">📲 Scansiona per contatti e indicazioni</div>
         <div class="sub">
           <strong>Funghi km 0</strong> • Fresco • Gelo • Trasformati • B2B<br>
-          Marino • Presente anche presso <strong>Store Eataly Roma</strong>
+          Marino • Store Eataly Roma
         </div>
-        <div class="trust" aria-label="Punti di forza">
+        <div class="trust">
           <span>✓ Produzione locale</span>
           <span>✓ Forniture B2B</span>
         </div>
       </div>
 
-      <!-- CTA: WhatsApp / Chiama / Naviga / Salva contatto -->
       <div class="actions">
         <a class="btn primary"
            href="https://wa.me/WHATSAPP_NUMBER?text=Salve%2C%20ho%20scansionato%20il%20vostro%20QR%20code%20e%20vorrei%20informazioni%20su%20prodotti%20e%20disponibilit%C3%A0."
-           aria-label="Scrivi su WhatsApp">
+           aria-label="WhatsApp">
           <svg class="wa-fill" viewBox="0 0 24 24" aria-hidden="true">
             <path fill="currentColor" d="M12.04 2C6.57 2 2.13 6.44 2.13 11.91c0 1.73.45 3.42 1.3 4.9L2 22l5.33-1.4a9.86 9.86 0 0 0 4.71 1.2h.01c5.47 0 9.9-4.44 9.9-9.9C21.95 6.44 17.51 2 12.04 2zm5.76 14.3c-.24.68-1.4 1.3-1.92 1.38-.48.07-1.1.1-1.78-.11-.41-.13-.93-.3-1.6-.6-2.82-1.22-4.66-4.1-4.8-4.29-.13-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33.25-.28.56-.35.74-.35h.54c.17 0 .4-.03.62.47.24.58.81 2 .88 2.14.07.15.11.32.02.51-.08.19-.13.32-.26.49-.13.17-.27.38-.39.5-.13.13-.26.27-.11.52.15.25.68 1.12 1.46 1.81 1 .88 1.84 1.15 2.1 1.28.26.13.41.11.56-.06.15-.17.64-.74.81-1 .17-.26.34-.21.57-.13.24.08 1.5.71 1.75.84.26.13.43.19.49.3.06.11.06.64-.18 1.32z"/>
           </svg>
@@ -427,7 +414,6 @@
           Naviga
         </a>
 
-        <!-- ✅ Salva contatto: vCard generata al click (zero problemi di download) -->
         <button class="btn" type="button" id="saveContact" aria-label="Salva contatto">
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
@@ -437,7 +423,6 @@
         </button>
       </div>
 
-      <!-- SHOP (solo sito) -->
       <div class="section alt">
         <h2>Shop</h2>
         <div class="grid">
@@ -454,17 +439,14 @@
                   Visita aziendamoretti.com
                 </a>
               </div>
-              <div class="small">Presenza anche presso Store Eataly Roma (senza link esterni).</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- DOVE CI TROVI -->
       <div class="section">
         <h2>Dove ci trovi</h2>
         <div class="grid">
-
           <div class="tile">
             <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
@@ -492,14 +474,11 @@
                 <a href="https://www.google.com/maps/search/?api=1&query=Piazzale+12+Ottobre+1492+00154+Roma+RM"
                    target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Apri su Google Maps</a>
               </div>
-              <div class="small">Solo presenza informativa (nessun link a Eataly).</div>
             </div>
           </div>
-
         </div>
       </div>
 
-      <!-- ORARI -->
       <div class="section">
         <h2>Orari (Marino)</h2>
         <div class="grid">
@@ -510,20 +489,15 @@
             </svg>
             <div>
               <b>Apertura</b>
-              <div class="small">
-                Lun–Sab: 09–13:30, 16–20<br/>
-                Dom: Chiuso
-              </div>
+              <div class="small">Lun–Sab: 09–13:30, 16–20<br/>Dom: Chiuso</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- PRODUZIONI -->
       <div class="section alt">
         <h2>Le nostre produzioni</h2>
         <div class="grid">
-
           <div class="tile">
             <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 3c3 0 6 2 6 5s-2 5-6 5-6-2-6-5 3-5 6-5z"/>
@@ -567,7 +541,6 @@
             </svg>
             <div>
               <b>Collaborazioni &amp; Forniture (B2B)</b>
-              <div class="small">Compila la richiesta con dati e P.IVA sul sito.</div>
               <div class="small">
                 <a href="https://aziendamoretti.com/pages/collaborazioni" target="_blank" rel="noopener noreferrer">
                   Vai al form B2B
@@ -575,30 +548,24 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
-      <!-- VIDEO -->
       <div class="section">
         <h2>Video</h2>
         <div class="video" aria-label="Video di presentazione">
-          <iframe
-            loading="lazy"
+          <iframe loading="lazy"
             src="https://www.youtube.com/embed/bsgln3b1mOc"
             title="Azienda Agricola Moretti"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+            allowfullscreen></iframe>
         </div>
       </div>
 
-      <!-- SOCIAL -->
       <div class="section alt">
         <h2>Social</h2>
         <div class="social-row">
-
           <div class="socwrap">
             <a class="soc" href="https://www.facebook.com/p/Azienda-Agricola-Moretti-100054240050633/"
                target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" aria-label="Facebook">
@@ -610,12 +577,8 @@
           </div>
 
           <div class="socwrap">
-            <a class="soc ig-open"
-               href="https://www.instagram.com/azienda_agricola_moretti/"
-               rel="noopener noreferrer"
-               referrerpolicy="no-referrer"
-               aria-label="Instagram"
-               data-ig="azienda_agricola_moretti">
+            <a class="soc ig-open" href="https://www.instagram.com/azienda_agricola_moretti/"
+               rel="noopener noreferrer" referrerpolicy="no-referrer" aria-label="Instagram" data-ig="azienda_agricola_moretti">
               <svg class="ig" viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5"></rect>
                 <circle cx="12" cy="12" r="4"></circle>
@@ -634,14 +597,12 @@
             </a>
             <div class="soclbl">TikTok</div>
           </div>
-
         </div>
       </div>
 
     </div>
   </div>
 
-  <!-- Sticky bar -->
   <div class="sticky" aria-label="Azioni rapide">
     <div class="inner">
       <a class="sbtn primary"
@@ -673,41 +634,38 @@
     </div>
   </div>
 
-  <!-- Instagram deep-link + fallback -->
   <script>
   (function(){
     var a = document.querySelector('.ig-open');
-    if(!a) return;
+    if(a){
+      var user = a.getAttribute('data-ig') || 'azienda_agricola_moretti';
+      var web  = 'https://www.instagram.com/' + user + '/';
+      var ua = navigator.userAgent || '';
+      var isAndroid = /Android/i.test(ua);
+      var isIOS = /iPhone|iPad|iPod/i.test(ua);
 
-    var user = a.getAttribute('data-ig') || 'azienda_agricola_moretti';
-    var web  = 'https://www.instagram.com/' + user + '/';
-
-    var ua = navigator.userAgent || '';
-    var isAndroid = /Android/i.test(ua);
-    var isIOS = /iPhone|iPad|iPod/i.test(ua);
-
-    a.addEventListener('click', function(e){
-      e.preventDefault();
-      if(isIOS){
-        var ios = 'instagram://user?username=' + encodeURIComponent(user);
-        var t1 = setTimeout(function(){ window.location.href = web; }, 700);
-        window.location.href = ios;
-        window.addEventListener('blur', function(){ clearTimeout(t1); }, { once:true });
-        return;
-      }
-      if(isAndroid){
-        var intent = 'intent://www.instagram.com/' + encodeURIComponent(user) +
-          '/#Intent;package=com.instagram.android;scheme=https;end';
-        var t2 = setTimeout(function(){ window.location.href = web; }, 700);
-        window.location.href = intent;
-        window.addEventListener('blur', function(){ clearTimeout(t2); }, { once:true });
-        return;
-      }
-      window.location.href = web;
-    });
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        if(isIOS){
+          var ios = 'instagram://user?username=' + encodeURIComponent(user);
+          var t1 = setTimeout(function(){ window.location.href = web; }, 700);
+          window.location.href = ios;
+          window.addEventListener('blur', function(){ clearTimeout(t1); }, { once:true });
+          return;
+        }
+        if(isAndroid){
+          var intent = 'intent://www.instagram.com/' + encodeURIComponent(user) +
+            '/#Intent;package=com.instagram.android;scheme=https;end';
+          var t2 = setTimeout(function(){ window.location.href = web; }, 700);
+          window.location.href = intent;
+          window.addEventListener('blur', function(){ clearTimeout(t2); }, { once:true });
+          return;
+        }
+        window.location.href = web;
+      });
+    }
   })();
 
-  // ✅ vCard: genera e apre/salva in modo compatibile
   (function(){
     var btn = document.getElementById('saveContact');
     if(!btn) return;
@@ -727,21 +685,17 @@ URL:https://www.instagram.com/azienda_agricola_moretti/
 URL:https://www.facebook.com/p/Azienda-Agricola-Moretti-100054240050633/
 URL:https://www.tiktok.com/@aziendamoretti
 URL:https://aziendamoretti.com/pages/collaborazioni
-NOTE:Per B2B compila il form nella pagina Collaborazioni.
 END:VCARD`;
 
     btn.addEventListener('click', function(){
       var ua = navigator.userAgent || '';
       var isIOS = /iPhone|iPad|iPod/i.test(ua);
 
-      // iOS: apri come data URL (import contatto immediato)
       if(isIOS){
-        var dataUrl = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
-        window.location.href = dataUrl;
+        window.location.href = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
         return;
       }
 
-      // Android/desktop: download via Blob
       try{
         var blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
         var url = URL.createObjectURL(blob);
@@ -755,9 +709,7 @@ END:VCARD`;
           a.remove();
         }, 800);
       }catch(e){
-        // fallback universale
-        var fallback = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
-        window.location.href = fallback;
+        window.location.href = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
       }
     });
   })();
