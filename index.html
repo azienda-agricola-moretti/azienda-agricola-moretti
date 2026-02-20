@@ -18,7 +18,7 @@
 
   <meta name="theme-color" content="#20140D" />
 
-  <!-- Montserrat -->
+  <!-- ✅ Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -64,7 +64,7 @@
       overflow:hidden;
     }
 
-    /* ✅ LOGO: sempre visibile, grande, non tagliato, ottimizzato mobile */
+    /* ✅ LOGO: grande, sempre visibile, non tagliato */
     .logo-wrap{
       display:flex;
       justify-content:center;
@@ -74,16 +74,14 @@
     }
     .logo{
       display:block;
-      width: min(520px, 92vw);     /* grande su mobile, ma con limite su desktop */
-      height: auto;
-      max-height: 86px;            /* evita che diventi enorme */
-      object-fit: contain;         /* mai tagli */
-      image-rendering: auto;
+      width: min(520px, 92vw);
+      height:auto;
+      max-height:86px;
+      object-fit:contain;
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
     }
 
-    /* Hero pulito: niente avatar obbligatorio (più corporate) */
     .hero{
       position:relative;
       padding:18px 18px 22px;
@@ -117,13 +115,14 @@
     }
     .sub{
       margin:12px auto 0;
-      max-width:520px;
+      max-width:560px;
       color:var(--muted);
       font-size:14px;
       line-height:1.55;
       font-weight:400;
     }
 
+    /* ✅ QUI: azioni in alto -> SOLO CHIAMA (pulsante scuro) */
     .actions{
       padding:14px 18px 18px;
       display:grid;
@@ -140,7 +139,7 @@
       gap:10px;
       text-decoration:none;
       border-radius:16px;
-      padding:14px 14px;
+      padding:16px 14px;
       font-weight:700;
       border:1px solid var(--line);
       background:#fff;
@@ -161,11 +160,6 @@
       color:#fff;
       border-color:transparent;
       box-shadow:0 16px 30px rgba(32,20,13,.20);
-    }
-    .btn.secondary{
-      border-color: rgba(32,20,13,.22);
-      color: var(--brand);
-      background:#fff;
     }
 
     .section{
@@ -260,6 +254,7 @@
     }
     .soc svg.ig *{ fill:none !important; }
 
+    /* ✅ Sticky bar: SOLO Chiama / WhatsApp / Sito */
     .sticky{
       position:fixed;
       left:0; right:0; bottom:0;
@@ -305,8 +300,6 @@
     .lbl{min-width:0; overflow:hidden; text-overflow:ellipsis}
 
     @media (min-width:560px){
-      .actions{grid-template-columns:1fr 1fr}
-      .actions .btn:last-child{grid-column:1 / -1}
       .grid{grid-template-columns:1fr 1fr}
     }
     @media (max-width:360px){
@@ -320,52 +313,32 @@
   <div class="wrap">
     <div class="card">
 
-      <!-- ✅ LOGO (file caricato: logo-moretti.jpg) -->
+      <!-- ✅ LOGO: file reale con spazio -> serve %20 -->
       <div class="logo-wrap">
-        <img class="logo" src="./logo-moretti.jpg" alt="Azienda Agricola Moretti" loading="eager" decoding="async">
+        <img class="logo" src="./logo%20moretti.jpg" alt="Azienda Agricola Moretti" loading="eager" decoding="async">
       </div>
 
       <div class="hero">
         <h1>Azienda Agricola Moretti</h1>
         <div class="role">Prodotti agricoli · Vendita diretta</div>
-        <div class="sub">Ci trovi in azienda a Marino e anche nello store Eataly a Roma.</div>
+
+        <!-- ✅ rigo aggiornato come mi hai chiesto -->
+        <div class="sub">
+          Ci trovi a Marino e nello store Eataly di Roma · Linea gelo, fresco e trasformati · Produzione funghi a km 0 · Dettaglio e ingrosso
+        </div>
       </div>
 
+      <!-- ✅ SOLO CHIAMA (pulsante scuro) -->
       <div class="actions">
-        <a class="btn primary"
-           href="https://www.eataly.net/it_it/spesa-online/dispensa/conserve?ManufacturerFilter=%5B%22Azienda%20Agricola%20Moretti%22%5D"
-           target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6l-2-2H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/>
-          </svg>
-          Ordina su Eataly
-        </a>
-
-        <a class="btn secondary" href="tel:+390688936064">
+        <a class="btn primary" href="tel:+390688936064">
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
           </svg>
           Chiama
         </a>
-
-        <!-- WhatsApp: sostituisci 39XXXXXXXXXX se esiste -->
-        <a class="btn" href="https://wa.me/39XXXXXXXXXX" rel="noopener noreferrer">
-          <svg class="wa-fill" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M12.04 2C6.57 2 2.13 6.44 2.13 11.91c0 1.73.45 3.42 1.3 4.9L2 22l5.33-1.4a9.86 9.86 0 0 0 4.71 1.2h.01c5.47 0 9.9-4.44 9.9-9.9C21.95 6.44 17.51 2 12.04 2zm5.76 14.3c-.24.68-1.4 1.3-1.92 1.38-.48.07-1.1.1-1.78-.11-.41-.13-.93-.3-1.6-.6-2.82-1.22-4.66-4.1-4.8-4.29-.13-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33.25-.28.56-.35.74-.35h.54c.17 0 .4-.03.62.47.24.58.81 2 .88 2.14.07.15.11.32.02.51-.08.19-.13.32-.26.49-.13.17-.27.38-.39.5-.13.13-.26.27-.11.52.15.25.68 1.12 1.46 1.81 1 .88 1.84 1.15 2.1 1.28.26.13.41.11.56-.06.15-.17.64-.74.81-1 .17-.26.34-.21.57-.13.24.08 1.5.71 1.75.84.26.13.43.19.49.3.06.11.06.64-.18 1.32z"/>
-          </svg>
-          WhatsApp
-        </a>
-
-        <a class="btn" href="https://aziendamoretti.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="2" y1="12" x2="22" y2="12"/>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-          Visita il sito
-        </a>
       </div>
 
+      <!-- ✅ Dove ci trovi: 2 location (Azienda + Eataly) -->
       <div class="section">
         <h2>Dove ci trovi</h2>
         <div class="grid">
@@ -403,6 +376,65 @@
         </div>
       </div>
 
+      <!-- ✅ Shop (Eataly link) -->
+      <div class="section">
+        <h2>Shop</h2>
+        <div class="grid">
+          <div class="tile">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6l-2-2H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/>
+            </svg>
+            <div>
+              <b>Ordina su Eataly</b>
+              <div class="small">
+                <a href="https://www.eataly.net/it_it/spesa-online/dispensa/conserve?ManufacturerFilter=%5B%22Azienda%20Agricola%20Moretti%22%5D"
+                   target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
+                  Apri lo shop con i prodotti Moretti
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tile">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <div>
+              <b>Sito ufficiale</b>
+              <div class="small">
+                <a href="https://aziendamoretti.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
+                  Visita aziendamoretti.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ✅ Orari (Marino) -->
+      <div class="section">
+        <h2>Orari</h2>
+        <div class="grid">
+          <div class="tile">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+            <div>
+              <b>Apertura (Marino)</b>
+              <div class="small">
+                Lun–Sab: 09–13:30, 16–20<br/>
+                Dom: Chiuso
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ Social -->
       <div class="section">
         <h2>Social</h2>
         <div class="social-row">
@@ -440,8 +472,10 @@
     </div>
   </div>
 
+  <!-- ✅ Sticky bar: Chiama / WhatsApp / Sito -->
   <div class="sticky" aria-label="Azioni rapide">
     <div class="inner">
+
       <a class="sbtn primary" href="tel:+390688936064">
         <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -449,23 +483,22 @@
         <span class="lbl">Chiama</span>
       </a>
 
-      <a class="sbtn" href="https://www.google.com/maps/search/?api=1&query=Via+Paolo+Mercuri+23+00047+Marino+RM"
-         target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
-        <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
-          <circle cx="12" cy="11" r="2"/>
+      <a class="sbtn" href="https://wa.me/39XXXXXXXXXX">
+        <svg class="wa-fill" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M12.04 2C6.57 2 2.13 6.44 2.13 11.91c0 1.73.45 3.42 1.3 4.9L2 22l5.33-1.4a9.86 9.86 0 0 0 4.71 1.2h.01c5.47 0 9.9-4.44 9.9-9.9C21.95 6.44 17.51 2 12.04 2zm5.76 14.3c-.24.68-1.4 1.3-1.92 1.38-.48.07-1.1.1-1.78-.11-.41-.13-.93-.3-1.6-.6-2.82-1.22-4.66-4.1-4.8-4.29-.13-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33.25-.28.56-.35.74-.35h.54c.17 0 .4-.03.62.47.24.58.81 2 .88 2.14.07.15.11.32.02.51-.08.19-.13.32-.26.49-.13.17-.27.38-.39.5-.13.13-.26.27-.11.52.15.25.68 1.12 1.46 1.81 1 .88 1.84 1.15 2.1 1.28.26.13.41.11.56-.06.15-.17.64-.74.81-1 .17-.26.34-.21.57-.13.24.08 1.5.71 1.75.84.26.13.43.19.49.3.06.11.06.64-.18 1.32z"/>
         </svg>
-        <span class="lbl">Marino</span>
+        <span class="lbl">WhatsApp</span>
       </a>
 
-      <a class="sbtn" href="https://www.google.com/maps/search/?api=1&query=Piazzale+12+Ottobre+1492+00154+Roma+RM"
-         target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
+      <a class="sbtn" href="https://aziendamoretti.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
         <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
-          <circle cx="12" cy="11" r="2"/>
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
         </svg>
-        <span class="lbl">Eataly</span>
+        <span class="lbl">Sito</span>
       </a>
+
     </div>
   </div>
 
