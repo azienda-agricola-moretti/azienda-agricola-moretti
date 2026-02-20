@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Moretti;Azienda Agricola;;;
+FN:Azienda Agricola Moretti
+ORG:Azienda Agricola Moretti
+TITLE:Produzione e Forniture Funghi
+TEL;TYPE=WORK,VOICE:+390688936064
+EMAIL;TYPE=WORK:azienda.moretti@libero.it
+ADR;TYPE=WORK:;;Via Paolo Mercuri 23;Marino;RM;00047;Italia
+URL;TYPE=WORK:https://aziendamoretti.com/
+URL:https://www.instagram.com/azienda_agricola_moretti/
+URL:https://www.facebook.com/p/Azienda-Agricola-Moretti-100054240050633/
+URL:https://www.tiktok.com/@aziendamoretti
+URL:https://aziendamoretti.com/pages/collaborazioni
+NOTE:Contatti salvati. Per B2B compila il form su "Collaborazioni" nel sito.
+END:VCARD
