@@ -9,7 +9,6 @@
 
   <link rel="canonical" href="https://azienda-agricola-moretti.github.io/azienda-agricola-moretti/" />
 
-  <!-- Social preview -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="it_IT" />
   <meta property="og:title" content="Azienda Agricola Moretti" />
@@ -19,7 +18,6 @@
 
   <meta name="theme-color" content="#2C1C14" />
 
-  <!-- Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -49,9 +47,7 @@
     body{
       font-family:"Montserrat", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
       color:var(--text);
-      background:
-        linear-gradient(180deg, rgba(44,28,20,.04), transparent 220px),
-        var(--bg);
+      background: linear-gradient(180deg, rgba(44,28,20,.04), transparent 220px), var(--bg);
       padding:22px 14px calc(108px + env(safe-area-inset-bottom));
     }
 
@@ -64,7 +60,6 @@
       overflow:hidden;
     }
 
-    /* LOGO */
     .logo-wrap{
       display:flex;
       justify-content:center;
@@ -81,7 +76,6 @@
       transform: translateZ(0);
     }
 
-    /* HERO (pulito, impattante) */
     .hero{
       position:relative;
       padding:18px 18px 14px;
@@ -160,7 +154,7 @@
       backdrop-filter: blur(8px);
     }
 
-    /* ✅ TOP CTA: 4 slot (2x2 appena possibile) */
+    /* CTA 4 slot */
     .actions{
       padding:14px 18px 18px;
       display:grid;
@@ -192,6 +186,7 @@
       overflow:hidden;
       text-overflow:ellipsis;
       text-align:center;
+      cursor:pointer;
     }
     .btn:hover{box-shadow:var(--shadow2); transform:translateY(-1px); border-color: rgba(44,28,20,.20)}
     .btn:active{transform:translateY(0px); box-shadow:0 8px 18px rgba(11,18,32,.10)}
@@ -249,8 +244,6 @@
 
     .tile b{display:block; font-weight:900; color:var(--brand);}
     .small{color:rgba(78,74,69,.85);font-size:13px;margin-top:4px;line-height:1.45;font-weight:600}
-    .tile a{color:inherit;text-decoration:none}
-    .tile a:hover{text-decoration:underline}
 
     .i{
       width:20px;height:20px;
@@ -271,22 +264,6 @@
       display:block;
       color: currentColor;
     }
-
-    /* mini CTA B2B -> pagina collaborazioni */
-    .mini-cta{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      margin-top:10px;
-      padding:10px 12px;
-      border-radius:14px;
-      border:1px solid rgba(44,28,20,.12);
-      background: rgba(255,255,255,.92);
-      font-weight:900;
-      text-decoration:none;
-    }
-    .mini-cta:hover{box-shadow:var(--shadow2); text-decoration:none}
-    .mini-cta .i{margin-top:0}
 
     /* Video */
     .video{
@@ -349,7 +326,7 @@
       letter-spacing:.01em;
     }
 
-    /* Sticky: 3 azioni top */
+    /* Sticky: WhatsApp / Chiama / Naviga */
     .sticky{
       position:fixed;
       left:0; right:0; bottom:0;
@@ -391,9 +368,7 @@
       border-color:transparent;
       box-shadow:0 14px 26px rgba(44,28,20,.16);
     }
-    .sbtn:focus{outline:3px solid var(--focus); outline-offset:2px}
     .lbl{min-width:0; overflow:hidden; text-overflow:ellipsis}
-
     @media (max-width:360px){
       .lbl{display:none}
       .sbtn{gap:0}
@@ -412,21 +387,18 @@
       <div class="hero">
         <h1>Azienda Agricola Moretti</h1>
         <div class="divider"></div>
-
         <div class="qrhint">📲 Scansiona per contatti, ordini e indicazioni</div>
-
         <div class="sub">
           <strong>Funghi km 0</strong> • Fresco • Gelo • Trasformati • B2B<br>
-          Marino &amp; Store Eataly Roma
+          Marino • Presente anche presso <strong>Store Eataly Roma</strong>
         </div>
-
         <div class="trust" aria-label="Punti di forza">
           <span>✓ Produzione locale</span>
-          <span>✓ Marino + Eataly</span>
+          <span>✓ Forniture B2B</span>
         </div>
       </div>
 
-      <!-- ✅ TOP CTA (4) -->
+      <!-- CTA: WhatsApp / Chiama / Naviga / Salva contatto -->
       <div class="actions">
         <a class="btn primary"
            href="https://wa.me/WHATSAPP_NUMBER?text=Salve%2C%20ho%20scansionato%20il%20vostro%20QR%20code%20e%20vorrei%20informazioni%20su%20prodotti%20e%20disponibilit%C3%A0."
@@ -437,7 +409,7 @@
           WhatsApp
         </a>
 
-        <a class="btn" href="tel:+390688936064" aria-label="Chiama Azienda Agricola Moretti">
+        <a class="btn" href="tel:+390688936064" aria-label="Chiama">
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
           </svg>
@@ -447,7 +419,7 @@
         <a class="btn"
            href="https://www.google.com/maps/dir/?api=1&destination=Via+Paolo+Mercuri+23+00047+Marino+RM"
            target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"
-           aria-label="Avvia navigazione verso Marino">
+           aria-label="Naviga">
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M21 10l-9 11-9-11a9 9 0 1 1 18 0z"/>
             <path d="M12 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
@@ -455,20 +427,99 @@
           Naviga
         </a>
 
-        <!-- ✅ vCard -->
-        <a class="btn"
-           href="./moretti.vcf"
-           download="Azienda_Agricola_Moretti.vcf"
-           aria-label="Salva contatto in rubrica">
+        <!-- ✅ Salva contatto: vCard generata al click (zero problemi di download) -->
+        <button class="btn" type="button" id="saveContact" aria-label="Salva contatto">
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
             <circle cx="12" cy="7" r="4"/>
           </svg>
           Salva contatto
-        </a>
+        </button>
       </div>
 
-      <!-- Produzioni -->
+      <!-- SHOP (solo sito) -->
+      <div class="section alt">
+        <h2>Shop</h2>
+        <div class="grid">
+          <div class="tile">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <div>
+              <b>Sito ufficiale</b>
+              <div class="small">
+                <a href="https://aziendamoretti.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
+                  Visita aziendamoretti.com
+                </a>
+              </div>
+              <div class="small">Presenza anche presso Store Eataly Roma (senza link esterni).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DOVE CI TROVI -->
+      <div class="section">
+        <h2>Dove ci trovi</h2>
+        <div class="grid">
+
+          <div class="tile">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
+              <circle cx="12" cy="11" r="2"/>
+            </svg>
+            <div>
+              <b>Azienda (Marino)</b>
+              <div class="small">Via Paolo Mercuri, 23 · 00047 Marino (RM)</div>
+              <div class="small">
+                <a href="https://www.google.com/maps/search/?api=1&query=Via+Paolo+Mercuri+23+00047+Marino+RM"
+                   target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Apri su Google Maps</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tile">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
+              <circle cx="12" cy="11" r="2"/>
+            </svg>
+            <div>
+              <b>Store Eataly (Roma)</b>
+              <div class="small">Piazzale 12 Ottobre 1492 · 00154 Roma (RM)</div>
+              <div class="small">
+                <a href="https://www.google.com/maps/search/?api=1&query=Piazzale+12+Ottobre+1492+00154+Roma+RM"
+                   target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Apri su Google Maps</a>
+              </div>
+              <div class="small">Solo presenza informativa (nessun link a Eataly).</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ORARI -->
+      <div class="section">
+        <h2>Orari (Marino)</h2>
+        <div class="grid">
+          <div class="tile">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+            <div>
+              <b>Apertura</b>
+              <div class="small">
+                Lun–Sab: 09–13:30, 16–20<br/>
+                Dom: Chiuso
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUZIONI -->
       <div class="section alt">
         <h2>Le nostre produzioni</h2>
         <div class="grid">
@@ -508,7 +559,6 @@
             </div>
           </div>
 
-          <!-- ✅ B2B -> Collaborazioni -->
           <div class="tile">
             <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M3 7h18"/>
@@ -517,26 +567,19 @@
             </svg>
             <div>
               <b>Collaborazioni &amp; Forniture (B2B)</b>
-              <div class="small">Ristorazione, negozi e distributori: invia richiesta con dati e P.IVA.</div>
-
-              <a class="mini-cta"
-                 href="https://aziendamoretti.com/pages/collaborazioni"
-                 target="_blank" rel="noopener noreferrer"
-                 aria-label="Vai al form collaborazioni B2B">
-                <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-                  <path d="M17 3h4v4"/>
-                  <path d="M10 14L21 3"/>
-                </svg>
-                Vai al form B2B
-              </a>
+              <div class="small">Compila la richiesta con dati e P.IVA sul sito.</div>
+              <div class="small">
+                <a href="https://aziendamoretti.com/pages/collaborazioni" target="_blank" rel="noopener noreferrer">
+                  Vai al form B2B
+                </a>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
 
-      <!-- Video -->
+      <!-- VIDEO -->
       <div class="section">
         <h2>Video</h2>
         <div class="video" aria-label="Video di presentazione">
@@ -551,104 +594,7 @@
         </div>
       </div>
 
-      <!-- Dove ci trovi -->
-      <div class="section">
-        <h2>Dove ci trovi</h2>
-        <div class="grid">
-
-          <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
-              <circle cx="12" cy="11" r="2"/>
-            </svg>
-            <div>
-              <b>Azienda (Marino)</b>
-              <div class="small">Via Paolo Mercuri, 23 · 00047 Marino (RM)</div>
-              <div class="small">
-                <a href="https://www.google.com/maps/search/?api=1&query=Via+Paolo+Mercuri+23+00047+Marino+RM"
-                   target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Apri su Google Maps</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
-              <circle cx="12" cy="11" r="2"/>
-            </svg>
-            <div>
-              <b>Store Eataly (Roma)</b>
-              <div class="small">Piazzale 12 Ottobre 1492 · 00154 Roma (RM)</div>
-              <div class="small">
-                <a href="https://www.google.com/maps/search/?api=1&query=Piazzale+12+Ottobre+1492+00154+Roma+RM"
-                   target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Apri su Google Maps</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Shop -->
-      <div class="section alt">
-        <h2>Shop</h2>
-        <div class="grid">
-
-          <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6l-2-2H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/>
-            </svg>
-            <div>
-              <b>Acquista su Eataly</b>
-              <div class="small">
-                <a href="https://www.eataly.net/it_it/spesa-online/dispensa/conserve?ManufacturerFilter=%5B%22Azienda%20Agricola%20Moretti%22%5D"
-                   target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
-                  Apri la selezione “Azienda Agricola Moretti”
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            <div>
-              <b>Sito ufficiale</b>
-              <div class="small">
-                <a href="https://aziendamoretti.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
-                  Visita aziendamoretti.com
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Orari -->
-      <div class="section">
-        <h2>Orari (Marino)</h2>
-        <div class="grid">
-          <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6v6l4 2"/>
-            </svg>
-            <div>
-              <b>Apertura</b>
-              <div class="small">
-                Lun–Sab: 09–13:30, 16–20<br/>
-                Dom: Chiuso
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Social -->
+      <!-- SOCIAL -->
       <div class="section alt">
         <h2>Social</h2>
         <div class="social-row">
@@ -742,7 +688,6 @@
 
     a.addEventListener('click', function(e){
       e.preventDefault();
-
       if(isIOS){
         var ios = 'instagram://user?username=' + encodeURIComponent(user);
         var t1 = setTimeout(function(){ window.location.href = web; }, 700);
@@ -750,7 +695,6 @@
         window.addEventListener('blur', function(){ clearTimeout(t1); }, { once:true });
         return;
       }
-
       if(isAndroid){
         var intent = 'intent://www.instagram.com/' + encodeURIComponent(user) +
           '/#Intent;package=com.instagram.android;scheme=https;end';
@@ -759,8 +703,62 @@
         window.addEventListener('blur', function(){ clearTimeout(t2); }, { once:true });
         return;
       }
-
       window.location.href = web;
+    });
+  })();
+
+  // ✅ vCard: genera e apre/salva in modo compatibile
+  (function(){
+    var btn = document.getElementById('saveContact');
+    if(!btn) return;
+
+    var vcard =
+`BEGIN:VCARD
+VERSION:3.0
+N:Moretti;Azienda Agricola;;;
+FN:Azienda Agricola Moretti
+ORG:Azienda Agricola Moretti
+TITLE:Produzione e Forniture Funghi
+TEL;TYPE=WORK,VOICE:+390688936064
+EMAIL;TYPE=WORK:azienda.moretti@libero.it
+ADR;TYPE=WORK:;;Via Paolo Mercuri 23;Marino;RM;00047;Italia
+URL;TYPE=WORK:https://aziendamoretti.com/
+URL:https://www.instagram.com/azienda_agricola_moretti/
+URL:https://www.facebook.com/p/Azienda-Agricola-Moretti-100054240050633/
+URL:https://www.tiktok.com/@aziendamoretti
+URL:https://aziendamoretti.com/pages/collaborazioni
+NOTE:Per B2B compila il form nella pagina Collaborazioni.
+END:VCARD`;
+
+    btn.addEventListener('click', function(){
+      var ua = navigator.userAgent || '';
+      var isIOS = /iPhone|iPad|iPod/i.test(ua);
+
+      // iOS: apri come data URL (import contatto immediato)
+      if(isIOS){
+        var dataUrl = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
+        window.location.href = dataUrl;
+        return;
+      }
+
+      // Android/desktop: download via Blob
+      try{
+        var blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'Azienda_Agricola_Moretti.vcf';
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function(){
+          URL.revokeObjectURL(url);
+          a.remove();
+        }, 800);
+      }catch(e){
+        // fallback universale
+        var fallback = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
+        window.location.href = fallback;
+      }
     });
   })();
   </script>
