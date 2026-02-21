@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 
   <title>Azienda Agricola Moretti</title>
-  <meta name="description" content="Hub contatti - Azienda Agricola Moretti" />
-
+  <meta name="description" content="Contatti, indicazioni, social e sito ufficiale - Azienda Agricola Moretti." />
   <link rel="canonical" href="https://azienda-agricola-moretti.github.io/azienda-agricola-moretti/" />
 
   <meta property="og:type" content="website" />
@@ -20,41 +19,38 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
       --brand:#2C1C14;
       --bg:#FFFFFF;
-      --cream:#FBF8F5;
+      --ivory:#F6F0E8;
       --card:#FFFFFF;
+
       --text:#0B1220;
-      --muted: rgba(78,74,69,.82);
-      --line:#EEE7E0;
+      --muted: rgba(78,74,69,.86);
+      --line: rgba(44,28,20,.16);
 
-      --shadow: 0 14px 34px rgba(11,18,32,.08);
-      --shadow2: 0 10px 22px rgba(11,18,32,.08);
-      --radius:24px;
-
-      --focus: rgba(44,28,20,.18);
+      --radius:22px;
+      --focus: rgba(44,28,20,.22);
     }
 
     *{box-sizing:border-box}
     html,body{margin:0}
 
     body{
-      font-family:"Montserrat", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-family:"Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
       color:var(--text);
-      background: linear-gradient(180deg, rgba(44,28,20,.04), transparent 220px), var(--bg);
-      padding:22px 14px calc(108px + env(safe-area-inset-bottom));
+      background: var(--ivory);
+      padding:22px 14px calc(110px + env(safe-area-inset-bottom));
     }
 
-    .wrap{max-width:640px;margin:0 auto}
+    .wrap{max-width:680px;margin:0 auto}
     .card{
       background:var(--card);
       border:1px solid var(--line);
       border-radius:var(--radius);
-      box-shadow:var(--shadow);
       overflow:hidden;
     }
 
@@ -73,86 +69,75 @@
       object-fit:contain;
     }
 
+    /* HERO */
     .hero{
-      position:relative;
-      padding:18px 18px 14px;
+      padding:22px 18px 18px;
       text-align:center;
-      background: var(--cream);
-      overflow:hidden;
+      background:#fff;
     }
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(rgba(251,248,245,.94), rgba(251,248,245,.94)),
-        url("./hero-bg.jpg") center / cover no-repeat;
-      filter: grayscale(6%) contrast(.98) brightness(1.03);
-      z-index:0;
-    }
-    .hero > *{position:relative; z-index:1;}
-
     h1{
       margin:0;
-      font-size: clamp(22px, 5.2vw, 30px);
-      letter-spacing:-.03em;
-      line-height:1.12;
+      font-size: clamp(26px, 6vw, 34px);
+      letter-spacing:-.02em;
+      line-height:1.15;
       font-weight:800;
       color: var(--brand);
     }
-
+    .tagline{
+      margin:10px auto 0;
+      max-width:560px;
+      font-size:12.8px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color: rgba(44,28,20,.78);
+      font-weight:800;
+    }
     .divider{
-      width:64px;
-      height:2px;
-      margin:10px auto 0;
-      background: rgba(111,124,75,.55);
+      width:92px;
+      height:1px;
+      margin:18px auto 0;
+      background: var(--brand);
+      opacity:.35;
       border-radius:999px;
     }
-
-    .qrhint{
-      margin:12px auto 0;
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(44,28,20,.10);
-      background: rgba(255,255,255,.72);
-      color: rgba(78,74,69,.90);
-      font-size:12px;
-      font-weight:900;
-    }
-
     .sub{
-      margin:10px auto 0;
-      max-width:580px;
+      margin:14px auto 0;
+      max-width:620px;
       color: var(--muted);
       font-size:13.5px;
-      line-height:1.45;
+      line-height:1.65;
       font-weight:600;
     }
-    .sub strong{font-weight:900;color:var(--brand);}
 
-    .trust{
-      margin:10px auto 0;
-      display:flex;
-      gap:8px;
-      justify-content:center;
-      flex-wrap:wrap;
-      font-size:11.5px;
-      color: rgba(78,74,69,.86);
-      font-weight:900;
+    /* Sections */
+    .section{
+      border-top:1px solid var(--line);
+      padding:18px;
+      background:#fff;
     }
-    .trust span{
-      padding:7px 9px;
-      border:1px solid rgba(44,28,20,.10);
-      border-radius:999px;
-      background: rgba(255,255,255,.75);
-      backdrop-filter: blur(8px);
+    .section.alt{ background: var(--ivory); }
+
+    .section h2{
+      margin:0 0 12px;
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:rgba(78,74,69,.82);
+      font-weight:800;
     }
 
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+    }
+    @media (min-width:560px){
+      .grid{grid-template-columns:1fr 1fr}
+    }
+
+    /* Buttons / tiles (premium minimal) */
     .actions{
-      padding:14px 18px 18px;
+      padding:16px 18px 18px;
       display:grid;
       grid-template-columns:1fr;
       gap:10px;
@@ -171,52 +156,26 @@
       text-decoration:none;
       border-radius:18px;
       padding:16px 14px;
-      font-weight:900;
-      border:1px solid rgba(44,28,20,.10);
+      font-weight:800;
+      border:1px solid var(--line);
       background:#fff;
       color:var(--text);
-      box-shadow:0 1px 0 rgba(11,18,32,.03);
-      transition: transform .08s ease, box-shadow .18s ease, border-color .18s ease;
+      transition: transform .08s ease, border-color .18s ease, background .18s ease, opacity .18s ease;
       min-width:0;
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
       cursor:pointer;
     }
-    .btn:hover{box-shadow:var(--shadow2); transform:translateY(-1px); border-color: rgba(44,28,20,.20)}
-    .btn:active{transform:translateY(0px); box-shadow:0 8px 18px rgba(11,18,32,.10)}
-    .btn:focus{outline:3px solid rgba(44,28,20,.18); outline-offset:2px}
+    .btn:hover{ transform:translateY(-1px); border-color: rgba(44,28,20,.24); }
+    .btn:active{ transform:translateY(0px); opacity:.95; }
+    .btn:focus{ outline:none; }
+    .btn:focus-visible{ outline:3px solid var(--focus); outline-offset:2px; }
 
     .btn.primary{
       background:var(--brand);
       color:#fff;
       border-color:transparent;
-      box-shadow:0 14px 26px rgba(44,28,20,.18);
-    }
-
-    .section{
-      border-top:1px solid var(--line);
-      padding:18px;
-      background:#fff;
-    }
-    .section.alt{ background: var(--cream); }
-
-    .section h2{
-      margin:0 0 12px;
-      font-size:13px;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      color:rgba(78,74,69,.85);
-      font-weight:900;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:10px;
-    }
-    @media (min-width:560px){
-      .grid{grid-template-columns:1fr 1fr}
     }
 
     .tile{
@@ -224,52 +183,39 @@
       align-items:flex-start;
       gap:12px;
       padding:14px;
-      border:1px solid rgba(44,28,20,.10);
+      border:1px solid var(--line);
       border-radius:18px;
       background:#fff;
-      transition: box-shadow .18s ease, transform .08s ease, border-color .18s ease;
+      transition: transform .08s ease, border-color .18s ease;
       min-width:0;
     }
-    .section.alt .tile{ background: rgba(255,255,255,.92); }
-    .tile:hover{
-      box-shadow:var(--shadow2);
-      transform:translateY(-1px);
-      border-color: rgba(44,28,20,.18);
-    }
+    .section.alt .tile{ background: rgba(255,255,255,.94); }
+    .tile:hover{ transform:translateY(-1px); border-color: rgba(44,28,20,.24); }
 
-    .tile b{display:block; font-weight:900; color:var(--brand);}
-    .small{color:rgba(78,74,69,.85);font-size:13px;margin-top:4px;line-height:1.45;font-weight:600}
-
+    .tile b{display:block; font-weight:800; color:var(--brand);}
+    .small{color:rgba(78,74,69,.86);font-size:13px;margin-top:4px;line-height:1.5;font-weight:600}
     .tile a{color:inherit;text-decoration:none}
     .tile a:hover{text-decoration:underline}
 
-    .i{
-      width:20px;height:20px;
-      stroke: var(--brand);
-      stroke-width:2;
-      fill:none;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-      flex:0 0 auto;
+    /* ICON SYSTEM (coerente, fill “leggero”, senza contenitori) */
+    .icon{
+      width:20px;
+      height:20px;
       display:block;
-      margin-top:2px;
-    }
-    .btn.primary .i, .sbtn.primary .i{ stroke:#fff; }
-
-    .wa-fill{
-      width:20px;height:20px;
       flex:0 0 auto;
-      display:block;
-      color: currentColor;
+      color:var(--brand);
     }
+    .icon-lg{ width:22px; height:22px; }
 
+    .btn.primary .icon{ color:#fff; }
+
+    /* Video */
     .video{
       margin:14px auto 0;
-      max-width: 600px;
+      max-width: 640px;
       border-radius:18px;
       overflow:hidden;
-      box-shadow: 0 14px 30px rgba(0,0,0,.10);
-      border:1px solid rgba(44,28,20,.10);
+      border:1px solid var(--line);
       background:#000;
     }
     .video iframe{
@@ -281,52 +227,39 @@
       .video iframe{height: 280px;}
     }
 
-    .social-row{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:12px;
-      width:100%;
-    }
-    .socwrap{display:flex;flex-direction:column;align-items:center;gap:6px}
-    .soc{
-      width:100%;
-      height:48px;
-      border-radius:999px;
-      background:#111;
+    /* Social minimal (grandi, marrone uniforme, niente pill) */
+    .social-minimal{
       display:flex;
+      justify-content:center;
+      gap:28px;
+      margin-top:6px;
+    }
+    .social-minimal a{
+      display:inline-flex;
       align-items:center;
       justify-content:center;
       text-decoration:none;
-      box-shadow:0 10px 22px rgba(0,0,0,.10);
-      border:1px solid rgba(0,0,0,.08);
+      color:var(--brand);
+      transition: transform .15s ease, opacity .15s ease;
     }
-    .soc svg{ width:22px; height:22px; display:block; }
-    .soc svg path{ fill:#fff; }
-    .soc svg.ig{
-      fill:none !important;
-      stroke:#fff !important;
-      stroke-width:2;
-      stroke-linecap:round;
-      stroke-linejoin:round;
+    .social-minimal a:hover{
+      transform: translateY(-2px);
+      opacity:.75;
     }
-    .soc svg.ig *{ fill:none !important; }
-    .soclbl{
-      font-size:12px;
-      font-weight:900;
-      color:rgba(78,74,69,.78);
-    }
+    .social-icon{ width:26px; height:26px; display:block; }
 
+    /* Sticky */
     .sticky{
       position:fixed;
       left:0; right:0; bottom:0;
       padding:10px 12px calc(12px + env(safe-area-inset-bottom));
-      background:rgba(251,248,245,.86);
-      backdrop-filter: blur(12px);
-      border-top:1px solid rgba(231,225,219,.95);
+      background: rgba(246,240,232,.92);
+      backdrop-filter: blur(10px);
+      border-top:1px solid rgba(44,28,20,.14);
       z-index:999;
     }
     .sticky .inner{
-      max-width:640px;
+      max-width:680px;
       margin:0 auto;
       display:grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -339,23 +272,29 @@
       gap:8px;
       padding:12px 10px;
       border-radius:18px;
-      border:1px solid rgba(44,28,20,.10);
+      border:1px solid var(--line);
       background:#fff;
       color:var(--text);
-      font-weight:900;
+      font-weight:800;
       text-decoration:none;
-      box-shadow:0 10px 20px rgba(11,18,32,.08);
       font-size:14px;
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
+      transition: transform .08s ease, border-color .18s ease, opacity .18s ease;
     }
+    .sbtn:hover{ transform:translateY(-1px); border-color: rgba(44,28,20,.24); }
+    .sbtn:active{ transform:translateY(0px); opacity:.95; }
+    .sbtn:focus{ outline:none; }
+    .sbtn:focus-visible{ outline:3px solid var(--focus); outline-offset:2px; }
+
     .sbtn.primary{
       background:var(--brand);
       color:#fff;
       border-color:transparent;
-      box-shadow:0 14px 26px rgba(44,28,20,.16);
     }
+    .sbtn.primary .icon{ color:#fff; }
+
     .lbl{min-width:0; overflow:hidden; text-overflow:ellipsis}
     @media (max-width:360px){
       .lbl{display:none}
@@ -369,88 +308,97 @@
     <div class="card">
 
       <div class="logo-wrap">
+        <!-- Assicurati che il nome file sia corretto nel repo -->
         <img class="logo" src="./logo%20moretti.jpg" alt="Azienda Agricola Moretti" loading="eager" decoding="async">
       </div>
 
       <div class="hero">
         <h1>Azienda Agricola Moretti</h1>
+        <p class="tagline">Il sapore dell’autenticità a chilometro zero</p>
         <div class="divider"></div>
-        <div class="qrhint">📲 Scansiona per contatti e indicazioni</div>
-        <div class="sub">
-          <strong>Funghi km 0</strong> • Fresco • Gelo • Trasformati • B2B<br>
-          Marino • Store Eataly Roma
-        </div>
-        <div class="trust">
-          <span>✓ Produzione locale</span>
-          <span>✓ Forniture B2B</span>
-        </div>
+        <p class="sub">
+          Funghi km 0 • Fresco • Gelo • Trasformati • B2B<br>
+          Marino • Store Eataly Roma • Produzione locale • Forniture B2B
+        </p>
       </div>
 
+      <!-- AZIONI -->
       <div class="actions">
-        <a class="btn primary"
-           href="https://wa.me/WHATSAPP_NUMBER?text=Salve%2C%20ho%20scansionato%20il%20vostro%20QR%20code%20e%20vorrei%20informazioni%20su%20prodotti%20e%20disponibilit%C3%A0."
-           aria-label="WhatsApp">
-          <svg class="wa-fill" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M12.04 2C6.57 2 2.13 6.44 2.13 11.91c0 1.73.45 3.42 1.3 4.9L2 22l5.33-1.4a9.86 9.86 0 0 0 4.71 1.2h.01c5.47 0 9.9-4.44 9.9-9.9C21.95 6.44 17.51 2 12.04 2zm5.76 14.3c-.24.68-1.4 1.3-1.92 1.38-.48.07-1.1.1-1.78-.11-.41-.13-.93-.3-1.6-.6-2.82-1.22-4.66-4.1-4.8-4.29-.13-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33.25-.28.56-.35.74-.35h.54c.17 0 .4-.03.62.47.24.58.81 2 .88 2.14.07.15.11.32.02.51-.08.19-.13.32-.26.49-.13.17-.27.38-.39.5-.13.13-.26.27-.11.52.15.25.68 1.12 1.46 1.81 1 .88 1.84 1.15 2.1 1.28.26.13.41.11.56-.06.15-.17.64-.74.81-1 .17-.26.34-.21.57-.13.24.08 1.5.71 1.75.84.26.13.43.19.49.3.06.11.06.64-.18 1.32z"/>
+        <a class="btn primary" href="tel:+390688936064" aria-label="Chiama la sede di Marino">
+          <!-- Telefono (fill leggero) -->
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <path d="M6.6 2.8c.7-.4 1.6-.2 2 .5l1.6 2.9c.3.6.2 1.4-.3 1.9L8.7 9.3c.8 1.6 2.1 2.9 3.7 3.7l1.1-1.2c.5-.5 1.2-.6 1.9-.3l2.9 1.6c.7.4.9 1.3.5 2-.8 1.4-2.3 2.2-3.9 2.1-7.2-.3-13-6.1-13.3-13.3C1.5 5.1 2.3 3.6 3.7 2.8c.9-.5 1.9-.5 2.9 0z"/>
           </svg>
-          WhatsApp
-        </a>
-
-        <a class="btn" href="tel:+390688936064" aria-label="Chiama">
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-          Chiama
-        </a>
-
-        <a class="btn"
-           href="https://www.google.com/maps/dir/?api=1&destination=Via+Paolo+Mercuri+23+00047+Marino+RM"
-           target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"
-           aria-label="Naviga">
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 10l-9 11-9-11a9 9 0 1 1 18 0z"/>
-            <path d="M12 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
-          </svg>
-          Naviga
+          Chiama (Marino)
         </a>
 
         <button class="btn" type="button" id="saveContact" aria-label="Salva contatto">
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
+          <!-- Rubrica/contatto (fill leggero) -->
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <path d="M7 3h11a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a3 3 0 0 0-1 2V6a3 3 0 0 1 3-3z"/>
+            <path d="M8.5 6.8a2.4 2.4 0 1 0 0 4.8 2.4 2.4 0 0 0 0-4.8zM6.8 16.9c.7-2 2.4-3.2 4.5-3.2s3.8 1.2 4.5 3.2c.1.4-.2.8-.6.8H7.4c-.4 0-.7-.4-.6-.8z"/>
           </svg>
           Salva contatto
         </button>
+
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Via+Paolo+Mercuri+23+00047+Marino+RM"
+           target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" aria-label="Naviga verso la sede di Marino">
+          <!-- Pin unico (usato ovunque) -->
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <path d="M12 2.6c-3.6 0-6.6 2.9-6.6 6.6 0 5 5.9 11.8 6.2 12.1.2.3.7.3.9 0 .3-.3 6.2-7.1 6.2-12.1 0-3.7-3-6.6-6.7-6.6zm0 9.4a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z"/>
+          </svg>
+          Naviga (Marino)
+        </a>
+
+        <a class="btn" href="https://aziendamoretti.com/"
+           target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" aria-label="Visita il sito ufficiale">
+          <!-- Globo (fill leggero) -->
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <path d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19zm6.9 9.1h-3.1c-.1-2.2-.7-4.2-1.6-5.6a7.6 7.6 0 0 1 4.7 5.6zM12 4.4c1.1 1.3 2 3.9 2.2 7.2H9.8c.2-3.3 1.1-5.9 2.2-7.2zM5.1 11.6a7.6 7.6 0 0 1 4.7-5.6c-.9 1.4-1.5 3.4-1.6 5.6H5.1zm0 0h3.1c.1 2.2.7 4.2 1.6 5.6a7.6 7.6 0 0 1-4.7-5.6zm6.9 8.0c-1.1-1.3-2-3.9-2.2-7.2h4.4c-.2 3.3-1.1 5.9-2.2 7.2zm2.2-1.6c.9-1.4 1.5-3.4 1.6-5.6h3.1a7.6 7.6 0 0 1-4.7 5.6z"/>
+          </svg>
+          Sito ufficiale
+        </a>
       </div>
 
+      <!-- CONTATTI TITOLARI -->
       <div class="section alt">
-        <h2>Shop</h2>
+        <h2>Contatti titolari</h2>
         <div class="grid">
           <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M6.6 2.8c.7-.4 1.6-.2 2 .5l1.6 2.9c.3.6.2 1.4-.3 1.9L8.7 9.3c.8 1.6 2.1 2.9 3.7 3.7l1.1-1.2c.5-.5 1.2-.6 1.9-.3l2.9 1.6c.7.4.9 1.3.5 2-.8 1.4-2.3 2.2-3.9 2.1-7.2-.3-13-6.1-13.3-13.3C1.5 5.1 2.3 3.6 3.7 2.8c.9-.5 1.9-.5 2.9 0z"/>
             </svg>
             <div>
-              <b>Sito ufficiale</b>
+              <b>Andrea Moretti</b>
               <div class="small">
-                <a href="https://aziendamoretti.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
-                  Visita aziendamoretti.com
-                </a>
+                <a href="tel:+393465740673">+39 346 574 0673</a><br>
+                <a href="https://wa.me/393465740673?text=Salve%2C%20vorrei%20informazioni%20su%20prodotti%20e%20disponibilit%C3%A0.">Scrivi su WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tile">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M6.6 2.8c.7-.4 1.6-.2 2 .5l1.6 2.9c.3.6.2 1.4-.3 1.9L8.7 9.3c.8 1.6 2.1 2.9 3.7 3.7l1.1-1.2c.5-.5 1.2-.6 1.9-.3l2.9 1.6c.7.4.9 1.3.5 2-.8 1.4-2.3 2.2-3.9 2.1-7.2-.3-13-6.1-13.3-13.3C1.5 5.1 2.3 3.6 3.7 2.8c.9-.5 1.9-.5 2.9 0z"/>
+            </svg>
+            <div>
+              <b>Alessandro Moretti</b>
+              <div class="small">
+                <a href="tel:+393469443540">+39 346 944 3540</a><br>
+                <a href="https://wa.me/393469443540?text=Salve%2C%20vorrei%20informazioni%20su%20prodotti%20e%20disponibilit%C3%A0.">Scrivi su WhatsApp</a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- DOVE CI TROVI -->
       <div class="section">
         <h2>Dove ci trovi</h2>
         <div class="grid">
           <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
-              <circle cx="12" cy="11" r="2"/>
+            <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M12 2.6c-3.6 0-6.6 2.9-6.6 6.6 0 5 5.9 11.8 6.2 12.1.2.3.7.3.9 0 .3-.3 6.2-7.1 6.2-12.1 0-3.7-3-6.6-6.7-6.6zm0 9.4a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z"/>
             </svg>
             <div>
               <b>Azienda (Marino)</b>
@@ -463,9 +411,8 @@
           </div>
 
           <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
-              <circle cx="12" cy="11" r="2"/>
+            <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M12 2.6c-3.6 0-6.6 2.9-6.6 6.6 0 5 5.9 11.8 6.2 12.1.2.3.7.3.9 0 .3-.3 6.2-7.1 6.2-12.1 0-3.7-3-6.6-6.7-6.6zm0 9.4a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z"/>
             </svg>
             <div>
               <b>Store Eataly (Roma)</b>
@@ -479,13 +426,14 @@
         </div>
       </div>
 
+      <!-- ORARI -->
       <div class="section">
         <h2>Orari (Marino)</h2>
         <div class="grid">
           <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6v6l4 2"/>
+            <!-- orologio (fill leggero) -->
+            <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M12 2.7a9.3 9.3 0 1 0 0 18.6 9.3 9.3 0 0 0 0-18.6zm.9 4.4v5.2l3.6 2.1c.4.2.5.7.3 1.1-.2.4-.7.5-1.1.3l-4-2.4a.9.9 0 0 1-.5-.8V7.1c0-.5.4-.9.9-.9s.8.4.8.9z"/>
             </svg>
             <div>
               <b>Apertura</b>
@@ -495,13 +443,15 @@
         </div>
       </div>
 
+      <!-- PRODUZIONI -->
       <div class="section alt">
         <h2>Le nostre produzioni</h2>
         <div class="grid">
           <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 3c3 0 6 2 6 5s-2 5-6 5-6-2-6-5 3-5 6-5z"/>
-              <path d="M9.5 13.5v6.5h5v-6.5"/>
+            <!-- fungo (fill leggero) -->
+            <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M12 3c-5.2 0-9.3 3.1-9.3 7 0 .7.6 1.3 1.3 1.3h16c.7 0 1.3-.6 1.3-1.3 0-3.9-4.1-7-9.3-7z"/>
+              <path d="M9 11.9h6v6.2c0 1.8-1.5 3.2-3.2 3.2h-.4C9.5 21.3 8 19.9 8 18.1v-4.3c0-1.1.9-1.9 2-1.9z"/>
             </svg>
             <div>
               <b>Funghi freschi</b>
@@ -510,10 +460,10 @@
           </div>
 
           <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2v20"/>
-              <path d="M6 6c2 2 10 2 12 0"/>
-              <path d="M6 18c2-2 10-2 12 0"/>
+            <!-- neve/gelo (fill leggero) -->
+            <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M11.1 2.8c.5 0 .9.4.9.9v3l2-1.2c.4-.3 1-.1 1.2.3.3.4.1 1-.3 1.2l-2.9 1.7v2l2.9 1.7c.4.2.6.8.3 1.2-.2.4-.8.6-1.2.3l-2-1.2v3c0 .5-.4.9-.9.9s-.9-.4-.9-.9v-3l-2 1.2c-.4.3-1 .1-1.2-.3-.3-.4-.1-1 .3-1.2l2.9-1.7v-2L7.2 7.1c-.4-.2-.6-.8-.3-1.2.2-.4.8-.6 1.2-.3l2 1.2v-3c0-.5.4-.9.9-.9z"/>
+              <path d="M16.6 9.6c.3-.4.8-.5 1.2-.3l2.4 1.4c.4.2.6.8.3 1.2-.2.4-.8.6-1.2.3l-2.4-1.4c-.4-.2-.5-.8-.3-1.2zM6.2 12.2l-2.4 1.4c-.4.2-1 0-1.2-.3-.3-.4-.1-1 .3-1.2l2.4-1.4c.4-.2 1 0 1.2.3.2.4.1 1-.3 1.2z"/>
             </svg>
             <div>
               <b>Linea gelo</b>
@@ -522,10 +472,12 @@
           </div>
 
           <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M8 3h8"/>
-              <path d="M9 3v4c0 1 1 2 3 2s3-1 3-2V3"/>
-              <path d="M7 9h10v11a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V9z"/>
+            <!-- trasformati (sliders “leggeri”) -->
+            <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M6 4.2c.5 0 .9.4.9.9v13.8c0 .5-.4.9-.9.9s-.9-.4-.9-.9V5.1c0-.5.4-.9.9-.9z"/>
+              <path d="M12 4.2c.5 0 .9.4.9.9v13.8c0 .5-.4.9-.9.9s-.9-.4-.9-.9V5.1c0-.5.4-.9.9-.9z"/>
+              <path d="M18 4.2c.5 0 .9.4.9.9v13.8c0 .5-.4.9-.9.9s-.9-.4-.9-.9V5.1c0-.5.4-.9.9-.9z"/>
+              <path d="M6 7.2a1.7 1.7 0 1 0 0 3.4 1.7 1.7 0 0 0 0-3.4zM12 12.3a1.7 1.7 0 1 0 0 3.4 1.7 1.7 0 0 0 0-3.4zM18 8.9a1.7 1.7 0 1 0 0 3.4 1.7 1.7 0 0 0 0-3.4z"/>
             </svg>
             <div>
               <b>Trasformati</b>
@@ -534,10 +486,11 @@
           </div>
 
           <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M3 7h18"/>
-              <path d="M6 7v14h12V7"/>
-              <path d="M9 7V4h6v3"/>
+            <!-- B2B (loop “leggero”) -->
+            <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M12 4.1a7.9 7.9 0 0 1 6.9 4.1c.2.4.1.9-.3 1.2-.4.2-.9.1-1.2-.3A6.2 6.2 0 0 0 12 5.8c-2 0-3.8 1-5 2.6l1.3.1c.5 0 .8.5.8.9 0 .5-.5.8-.9.8L4.9 10c-.4 0-.7-.3-.8-.7L3.3 6.1c-.1-.4.1-.9.6-1 .4-.1.9.1 1 .6l.3 1.2A7.9 7.9 0 0 1 12 4.1z"/>
+              <path d="M12 19.9a7.9 7.9 0 0 1-6.9-4.1c-.2-.4-.1-.9.3-1.2.4-.2.9-.1 1.2.3A6.2 6.2 0 0 0 12 18.2c2 0 3.8-1 5-2.6l-1.3-.1c-.5 0-.8-.5-.8-.9 0-.5.5-.8.9-.8l3.3.2c.4 0 .7.3.8.7l.8 3.2c.1.4-.1.9-.6 1-.4.1-.9-.1-1-.6l-.3-1.2A7.9 7.9 0 0 1 12 19.9z"/>
+              <path d="M8.2 12.6h7.6c.5 0 .9.4.9.9s-.4.9-.9.9H8.2c-.5 0-.9-.4-.9-.9s.4-.9.9-.9z"/>
             </svg>
             <div>
               <b>Collaborazioni &amp; Forniture (B2B)</b>
@@ -551,6 +504,7 @@
         </div>
       </div>
 
+      <!-- VIDEO -->
       <div class="section">
         <h2>Video</h2>
         <div class="video" aria-label="Video di presentazione">
@@ -563,71 +517,60 @@
         </div>
       </div>
 
+      <!-- SOCIAL -->
       <div class="section alt">
         <h2>Social</h2>
-        <div class="social-row">
-          <div class="socwrap">
-            <a class="soc" href="https://www.facebook.com/p/Azienda-Agricola-Moretti-100054240050633/"
-               target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M14.5 8.5H16V6h-1.5C12.6 6 11.5 7.2 11.5 9v2H10v2.7h1.5V21h2.8v-7.3H16l.4-2.7h-2.1V9.3c0-.5.3-.8.8-.8z"/>
-              </svg>
-            </a>
-            <div class="soclbl">Facebook</div>
-          </div>
+        <div class="social-minimal">
+          <a href="https://www.facebook.com/p/Azienda-Agricola-Moretti-100054240050633/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M14.1 8.7h2V6h-2c-2 0-3.3 1.3-3.3 3.4v1.9H9v2.7h1.8V21h3.1v-7h2.1l.6-2.7h-2.7V9.7c0-.6.3-1 .9-1z"/>
+            </svg>
+          </a>
 
-          <div class="socwrap">
-            <a class="soc ig-open" href="https://www.instagram.com/azienda_agricola_moretti/"
-               rel="noopener noreferrer" referrerpolicy="no-referrer" aria-label="Instagram" data-ig="azienda_agricola_moretti">
-              <svg class="ig" viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="5"></rect>
-                <circle cx="12" cy="12" r="4"></circle>
-                <circle cx="17.5" cy="6.5" r="1"></circle>
-              </svg>
-            </a>
-            <div class="soclbl">Instagram</div>
-          </div>
+          <a href="https://www.instagram.com/azienda_agricola_moretti/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+            </svg>
+          </a>
 
-          <div class="socwrap">
-            <a class="soc" href="https://www.tiktok.com/@aziendamoretti"
-               target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" aria-label="TikTok">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M16.5 3c1.2 1.7 2.9 2.9 4.9 3v3.1c-1.9-.1-3.7-.8-5.2-1.9v6.2a6 6 0 1 1-6-6c.4 0 .8 0 1.2.1v3.3a2.7 2.7 0 1 0 1.9 2.6V3h3.2z"/>
-              </svg>
-            </a>
-            <div class="soclbl">TikTok</div>
-          </div>
+          <a href="https://www.tiktok.com/@aziendamoretti" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M16 3c1 1.5 2.5 2.5 4 2.7v3c-1.5-.1-3-.6-4-1.4v6.2a5 5 0 1 1-5-5c.3 0 .6 0 .9.1v3a2 2 0 1 0 1.6 2V3h2.5z"/>
+            </svg>
+          </a>
         </div>
       </div>
 
     </div>
   </div>
 
+  <!-- STICKY -->
   <div class="sticky" aria-label="Azioni rapide">
     <div class="inner">
-      <a class="sbtn primary"
-         href="https://wa.me/WHATSAPP_NUMBER?text=Salve%2C%20ho%20scansionato%20il%20vostro%20QR%20code%20e%20vorrei%20informazioni."
-         aria-label="WhatsApp">
-        <svg class="wa-fill" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="currentColor" d="M12.04 2C6.57 2 2.13 6.44 2.13 11.91c0 1.73.45 3.42 1.3 4.9L2 22l5.33-1.4a9.86 9.86 0 0 0 4.71 1.2h.01c5.47 0 9.9-4.44 9.9-9.9C21.95 6.44 17.51 2 12.04 2zm5.76 14.3c-.24.68-1.4 1.3-1.92 1.38-.48.07-1.1.1-1.78-.11-.41-.13-.93-.3-1.6-.6-2.82-1.22-4.66-4.1-4.8-4.29-.13-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33.25-.28.56-.35.74-.35h.54c.17 0 .4-.03.62.47.24.58.81 2 .88 2.14.07.15.11.32.02.51-.08.19-.13.32-.26.49-.13.17-.27.38-.39.5-.13.13-.26.27-.11.52.15.25.68 1.12 1.46 1.81 1 .88 1.84 1.15 2.1 1.28.26.13.41.11.56-.06.15-.17.64-.74.81-1 .17-.26.34-.21.57-.13.24.08 1.5.71 1.75.84.26.13.43.19.49.3.06.11.06.64-.18 1.32z"/>
-        </svg>
-        <span class="lbl">WhatsApp</span>
-      </a>
-
-      <a class="sbtn" href="tel:+390688936064" aria-label="Chiama">
-        <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      <a class="sbtn primary" href="tel:+390688936064" aria-label="Chiama la sede di Marino">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+          <path d="M6.6 2.8c.7-.4 1.6-.2 2 .5l1.6 2.9c.3.6.2 1.4-.3 1.9L8.7 9.3c.8 1.6 2.1 2.9 3.7 3.7l1.1-1.2c.5-.5 1.2-.6 1.9-.3l2.9 1.6c.7.4.9 1.3.5 2-.8 1.4-2.3 2.2-3.9 2.1-7.2-.3-13-6.1-13.3-13.3C1.5 5.1 2.3 3.6 3.7 2.8c.9-.5 1.9-.5 2.9 0z"/>
         </svg>
         <span class="lbl">Chiama</span>
       </a>
 
       <a class="sbtn"
+         href="https://wa.me/393465740673?text=Salve%2C%20vorrei%20informazioni%20su%20prodotti%20e%20disponibilit%C3%A0."
+         aria-label="WhatsApp Andrea">
+        <!-- WhatsApp: icona “leggera” (niente cerchio) -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+          <path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.3 21l4.8-1.1A8.8 8.8 0 1 0 12 3.2zm0 15.8c-1.4 0-2.7-.4-3.8-1.1l-.3-.2-2.8.7.7-2.7-.2-.3A7 7 0 1 1 12 19z"/>
+          <path d="M9.4 8.6c.2-.4.4-.4.6-.4h.5c.2 0 .4.1.5.4l.8 1.9c.1.3.1.6-.1.8l-.4.5c-.1.2-.1.4 0 .6.4.8 1.3 1.7 2.1 2.1.2.1.4.1.6 0l.5-.4c.2-.2.5-.2.8-.1l1.9.8c.3.1.4.3.4.5 0 .7-.4 1.5-1 1.7-.7.3-1.8.2-3.8-.7-2.1-.9-3.6-3.4-3.7-3.6-.1-.2-.8-1.2-.8-2.3 0-1.1.6-1.7.8-1.9z"/>
+        </svg>
+        <span class="lbl">WhatsApp</span>
+      </a>
+
+      <a class="sbtn"
          href="https://www.google.com/maps/dir/?api=1&destination=Via+Paolo+Mercuri+23+00047+Marino+RM"
          target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"
-         aria-label="Naviga">
-        <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M21 10l-9 11-9-11a9 9 0 1 1 18 0z"/>
-          <path d="M12 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+         aria-label="Naviga verso la sede di Marino">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+          <path d="M12 2.6c-3.6 0-6.6 2.9-6.6 6.6 0 5 5.9 11.8 6.2 12.1.2.3.7.3.9 0 .3-.3 6.2-7.1 6.2-12.1 0-3.7-3-6.6-6.7-6.6zm0 9.4a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z"/>
         </svg>
         <span class="lbl">Naviga</span>
       </a>
@@ -635,37 +578,6 @@
   </div>
 
   <script>
-  (function(){
-    var a = document.querySelector('.ig-open');
-    if(a){
-      var user = a.getAttribute('data-ig') || 'azienda_agricola_moretti';
-      var web  = 'https://www.instagram.com/' + user + '/';
-      var ua = navigator.userAgent || '';
-      var isAndroid = /Android/i.test(ua);
-      var isIOS = /iPhone|iPad|iPod/i.test(ua);
-
-      a.addEventListener('click', function(e){
-        e.preventDefault();
-        if(isIOS){
-          var ios = 'instagram://user?username=' + encodeURIComponent(user);
-          var t1 = setTimeout(function(){ window.location.href = web; }, 700);
-          window.location.href = ios;
-          window.addEventListener('blur', function(){ clearTimeout(t1); }, { once:true });
-          return;
-        }
-        if(isAndroid){
-          var intent = 'intent://www.instagram.com/' + encodeURIComponent(user) +
-            '/#Intent;package=com.instagram.android;scheme=https;end';
-          var t2 = setTimeout(function(){ window.location.href = web; }, 700);
-          window.location.href = intent;
-          window.addEventListener('blur', function(){ clearTimeout(t2); }, { once:true });
-          return;
-        }
-        window.location.href = web;
-      });
-    }
-  })();
-
   (function(){
     var btn = document.getElementById('saveContact');
     if(!btn) return;
@@ -676,15 +588,18 @@ VERSION:3.0
 N:Moretti;Azienda Agricola;;;
 FN:Azienda Agricola Moretti
 ORG:Azienda Agricola Moretti
-TITLE:Produzione e Forniture Funghi
+TITLE:Funghi km 0 · Fresco · Gelo · Trasformati · B2B
 TEL;TYPE=WORK,VOICE:+390688936064
+TEL;TYPE=CELL,VOICE:+393465740673
+TEL;TYPE=CELL,VOICE:+393469443540
 EMAIL;TYPE=WORK:azienda.moretti@libero.it
 ADR;TYPE=WORK:;;Via Paolo Mercuri 23;Marino;RM;00047;Italia
 URL;TYPE=WORK:https://aziendamoretti.com/
+URL:https://aziendamoretti.com/pages/collaborazioni
 URL:https://www.instagram.com/azienda_agricola_moretti/
 URL:https://www.facebook.com/p/Azienda-Agricola-Moretti-100054240050633/
 URL:https://www.tiktok.com/@aziendamoretti
-URL:https://aziendamoretti.com/pages/collaborazioni
+NOTE:Contatti rapidi — Andrea e Alessandro (WhatsApp)
 END:VCARD`;
 
     btn.addEventListener('click', function(){
