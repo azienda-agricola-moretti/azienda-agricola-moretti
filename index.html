@@ -25,13 +25,16 @@
   <style>
     :root{
       --brand:#2C1C14;
-      --bg:#FBF8F5;      /* avorio (più premium del bianco piatto) */
-      --card:#FFFFFF;
+
+      /* look più premium: sfondo bianco, dettagli avorio */
+      --bg:#FFFFFF;
+      --ivory:#FBF8F5;
+
       --text:#0B1220;
-      --muted: rgba(78,74,69,.82);
+      --muted: rgba(78,74,69,.84);
 
       --shadow: 0 14px 34px rgba(11,18,32,.08);
-      --shadow2: 0 10px 22px rgba(11,18,32,.10);
+      --shadow2: 0 10px 22px rgba(11,18,32,.08);
       --radius:24px;
 
       --focus: rgba(44,28,20,.18);
@@ -49,33 +52,46 @@
 
     .wrap{max-width:640px;margin:0 auto}
     .card{
-      background:var(--card);
+      background:#fff;
       border-radius:var(--radius);
       box-shadow:var(--shadow);
       overflow:hidden;
     }
 
+    /* LOGO più grande e pulito */
     .logo-wrap{
       display:flex;
       justify-content:center;
-      padding: clamp(14px, 3.8vw, 22px) 16px;
+      padding: clamp(16px, 4vw, 24px) 16px;
       background:#fff;
     }
     .logo{
       display:block;
-      width: min(520px, 92vw);
+      width: min(560px, 94vw);
       height:auto;
-      max-height:92px;
+      max-height:110px;
       object-fit:contain;
     }
 
-    /* HERO più arioso, senza linee/divisori */
+    /* HERO più arioso */
     .hero{
       position:relative;
-      padding: clamp(18px, 4vw, 28px) 18px 18px;
+      padding:18px 18px 18px;
       text-align:center;
-      background: #fff;
+      background: var(--ivory);
+      overflow:hidden;
     }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(rgba(251,248,245,.92), rgba(251,248,245,.92)),
+        url("./hero-bg.jpg") center / cover no-repeat;
+      filter: grayscale(6%) contrast(.98) brightness(1.03);
+      z-index:0;
+    }
+    .hero > *{position:relative; z-index:1;}
 
     h1{
       margin:0;
@@ -86,44 +102,16 @@
       color: var(--brand);
     }
 
-    .qrhint{
-      margin:12px auto 0;
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      background: rgba(44,28,20,.06);
-      color: rgba(44,28,20,.88);
-      font-size:12px;
-      font-weight:900;
-    }
-
+    /* testo unico ottimizzato */
     .sub{
       margin:12px auto 0;
-      max-width:580px;
+      max-width:600px;
       color: var(--muted);
-      font-size:13.5px;
-      line-height:1.5;
-      font-weight:600;
+      font-size:14px;
+      line-height:1.35;
+      font-weight:700;
     }
     .sub strong{font-weight:900;color:var(--brand);}
-
-    .trust{
-      margin:12px auto 0;
-      display:flex;
-      gap:8px;
-      justify-content:center;
-      flex-wrap:wrap;
-      font-size:11.5px;
-      color: rgba(78,74,69,.86);
-      font-weight:900;
-    }
-    .trust span{
-      padding:7px 10px;
-      border-radius:999px;
-      background: rgba(44,28,20,.06);
-    }
 
     .actions{
       padding:14px 18px 18px;
@@ -136,7 +124,6 @@
       .actions{ grid-template-columns: 1fr 1fr; }
     }
 
-    /* Bottoni: più minimal (niente linee forti) */
     .btn{
       display:flex;
       align-items:center;
@@ -146,62 +133,62 @@
       border-radius:18px;
       padding:16px 14px;
       font-weight:900;
-      border:0;
-      background: rgba(44,28,20,.05);
+      border:1px solid rgba(44,28,20,.10);
+      background:#fff;
       color:var(--text);
-      transition: transform .08s ease, box-shadow .18s ease, background .18s ease;
+      box-shadow:0 1px 0 rgba(11,18,32,.03);
+      transition: transform .08s ease, box-shadow .18s ease, border-color .18s ease;
       min-width:0;
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
       cursor:pointer;
     }
-    .btn:hover{box-shadow:var(--shadow2); transform:translateY(-1px); background: rgba(44,28,20,.07)}
+    .btn:hover{box-shadow:var(--shadow2); transform:translateY(-1px); border-color: rgba(44,28,20,.18)}
     .btn:active{transform:translateY(0px); box-shadow:0 8px 18px rgba(11,18,32,.10)}
     .btn:focus{outline:3px solid var(--focus); outline-offset:2px}
 
     .btn.primary{
       background:var(--brand);
       color:#fff;
+      border-color:transparent;
       box-shadow:0 14px 26px rgba(44,28,20,.18);
     }
-    .btn.primary:hover{background:#24160f}
 
-    /* ICON STYLE: marrone, non “macchie piene” */
+    /* icone inline sempre perfette */
     .i{
       width:20px;height:20px;
-      stroke: currentColor;
-      stroke-width:2.1;
+      stroke: var(--brand);
+      stroke-width:2;
       fill:none;
       stroke-linecap:round;
       stroke-linejoin:round;
       flex:0 0 auto;
       display:block;
       margin-top:1px;
-      color: var(--brand);
     }
-    .btn.primary .i, .sbtn.primary .i{ color:#fff; }
+    .btn.primary .i, .sbtn.primary .i{ stroke:#fff; }
 
-    /* WhatsApp in bottone primario: resta riconoscibile (bianco su marrone) */
     .wa-fill{
       width:20px;height:20px;
       flex:0 0 auto;
       display:block;
-      color: #fff;
+      color: currentColor;
     }
 
+    /* sezioni più minimal: niente righe “pesanti”, solo spazio */
     .section{
       padding:18px;
       background:#fff;
     }
-    .section.alt{ background: transparent; }
+    .section.alt{ background: var(--ivory); }
 
     .section h2{
       margin:0 0 12px;
       font-size:13px;
       letter-spacing:.14em;
       text-transform:uppercase;
-      color:rgba(78,74,69,.85);
+      color:rgba(78,74,69,.82);
       font-weight:900;
     }
 
@@ -214,36 +201,42 @@
       .grid{grid-template-columns:1fr 1fr}
     }
 
-    /* Tile minimal: niente bordi */
     .tile{
       display:flex;
       align-items:flex-start;
       gap:12px;
       padding:14px;
-      border:0;
+      border:1px solid rgba(44,28,20,.10);
       border-radius:18px;
-      background: rgba(255,255,255,.92);
-      box-shadow: 0 10px 22px rgba(11,18,32,.06);
-      transition: box-shadow .18s ease, transform .08s ease;
+      background:#fff;
+      transition: box-shadow .18s ease, transform .08s ease, border-color .18s ease;
       min-width:0;
     }
+    .section.alt .tile{ background: rgba(255,255,255,.92); }
     .tile:hover{
       box-shadow:var(--shadow2);
       transform:translateY(-1px);
+      border-color: rgba(44,28,20,.18);
     }
 
     .tile b{display:block; font-weight:900; color:var(--brand);}
-    .small{color:rgba(78,74,69,.85);font-size:13px;margin-top:4px;line-height:1.45;font-weight:600}
+    .small{color:rgba(78,74,69,.86);font-size:13px;margin-top:4px;line-height:1.45;font-weight:600}
+
     .tile a{color:inherit;text-decoration:none}
     .tile a:hover{text-decoration:underline}
 
-    /* Video: NON si tocca */
+    /* ✅ LE NOSTRE PRODUZIONI: senza icone */
+    .tile.noicon{ gap:0; }
+    .tile.noicon b{ margin:0; }
+
+    /* VIDEO intoccato */
     .video{
       margin:14px auto 0;
       max-width: 600px;
       border-radius:18px;
       overflow:hidden;
       box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      border:1px solid rgba(44,28,20,.10);
       background:#000;
     }
     .video iframe{
@@ -255,50 +248,44 @@
       .video iframe{height: 280px;}
     }
 
-    /* SOCIAL: solo icone marroni, senza pill e senza label, sempre visibili */
+    /* ✅ SOCIAL: solo icona marrone, niente contorni/pill nere */
     .social-row{
       display:flex;
-      gap:18px;
+      gap:16px;
       justify-content:center;
       align-items:center;
       flex-wrap:wrap;
-      padding-top:4px;
+      padding-top:2px;
     }
     .soc{
-      display:inline-flex;
+      width:44px;
+      height:44px;
+      display:flex;
       align-items:center;
       justify-content:center;
-      width:54px;
-      height:54px;
-      border-radius:16px;
       text-decoration:none;
-      background: rgba(44,28,20,.05);
-      transition: transform .08s ease, box-shadow .18s ease, background .18s ease;
+      background: rgba(255,255,255,.75);
+      border-radius:999px;
+      border:1px solid rgba(44,28,20,.10);
+      transition: transform .08s ease, box-shadow .18s ease, border-color .18s ease;
+      box-shadow: 0 10px 20px rgba(11,18,32,.06);
     }
     .soc:hover{
-      background: rgba(44,28,20,.08);
-      box-shadow: 0 10px 22px rgba(11,18,32,.10);
       transform: translateY(-1px);
+      box-shadow: var(--shadow2);
+      border-color: rgba(44,28,20,.18);
     }
-    .soc svg{
-      width:28px;
-      height:28px;
-      display:block;
-      color: var(--brand);
-    }
-    /* IMPORTANTISSIMO: niente bianco, niente fill:none che le uccide */
-    .soc svg *{
-      fill: currentColor !important;
-      stroke: none !important;
-    }
+    .soc svg{ width:22px; height:22px; display:block; }
+    .soc svg path{ fill: var(--brand); }
 
-    /* STICKY bottom minimal */
+    /* sticky bottom */
     .sticky{
       position:fixed;
       left:0; right:0; bottom:0;
       padding:10px 12px calc(12px + env(safe-area-inset-bottom));
-      background: rgba(251,248,245,.88);
+      background:rgba(251,248,245,.90);
       backdrop-filter: blur(12px);
+      border-top:1px solid rgba(231,225,219,.95);
       z-index:999;
     }
     .sticky .inner{
@@ -315,22 +302,21 @@
       gap:8px;
       padding:12px 10px;
       border-radius:18px;
-      border:0;
-      background: rgba(44,28,20,.05);
+      border:1px solid rgba(44,28,20,.10);
+      background:#fff;
       color:var(--text);
       font-weight:900;
       text-decoration:none;
-      box-shadow:0 10px 20px rgba(11,18,32,.06);
+      box-shadow:0 10px 20px rgba(11,18,32,.08);
       font-size:14px;
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
-      transition: transform .08s ease, box-shadow .18s ease, background .18s ease;
     }
-    .sbtn:hover{background: rgba(44,28,20,.07); box-shadow:0 12px 24px rgba(11,18,32,.10); transform: translateY(-1px);}
     .sbtn.primary{
       background:var(--brand);
       color:#fff;
+      border-color:transparent;
       box-shadow:0 14px 26px rgba(44,28,20,.16);
     }
     .lbl{min-width:0; overflow:hidden; text-overflow:ellipsis}
@@ -351,14 +337,8 @@
 
       <div class="hero">
         <h1>Azienda Agricola Moretti</h1>
-        <div class="qrhint">📲 Scansiona per contatti e indicazioni</div>
         <div class="sub">
-          <strong>Funghi km 0</strong> • Fresco • Gelo • Trasformati • B2B<br>
-          Marino • Store Eataly Roma
-        </div>
-        <div class="trust">
-          <span>✓ Produzione locale</span>
-          <span>✓ Forniture B2B</span>
+          <strong>Funghi km 0</strong> • Fresco • Linea gelo • Trasformati • Forniture B2B — Marino (RM) • Store Eataly Roma
         </div>
       </div>
 
@@ -474,47 +454,28 @@
       <div class="section alt">
         <h2>Le nostre produzioni</h2>
         <div class="grid">
-          <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 3c3 0 6 2 6 5s-2 5-6 5-6-2-6-5 3-5 6-5z"/>
-              <path d="M9.5 13.5v6.5h5v-6.5"/>
-            </svg>
+          <div class="tile noicon">
             <div>
               <b>Funghi freschi</b>
               <div class="small">Selezione giornaliera da produzione propria, qualità e tracciabilità.</div>
             </div>
           </div>
 
-          <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2v20"/>
-              <path d="M6 6c2 2 10 2 12 0"/>
-              <path d="M6 18c2-2 10-2 12 0"/>
-            </svg>
+          <div class="tile noicon">
             <div>
               <b>Linea gelo</b>
               <div class="small">Conservazione studiata per mantenere gusto e caratteristiche del prodotto.</div>
             </div>
           </div>
 
-          <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M8 3h8"/>
-              <path d="M9 3v4c0 1 1 2 3 2s3-1 3-2V3"/>
-              <path d="M7 9h10v11a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V9z"/>
-            </svg>
+          <div class="tile noicon">
             <div>
               <b>Trasformati</b>
               <div class="small">Lavorazioni controllate e ricette pensate per valorizzare la materia prima.</div>
             </div>
           </div>
 
-          <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M3 7h18"/>
-              <path d="M6 7v14h12V7"/>
-              <path d="M9 7V4h6v3"/>
-            </svg>
+          <div class="tile noicon">
             <div>
               <b>Collaborazioni &amp; Forniture (B2B)</b>
               <div class="small">
@@ -544,7 +505,6 @@
         <div class="social-row">
           <a class="soc" href="https://www.facebook.com/p/Azienda-Agricola-Moretti-100054240050633/"
              target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" aria-label="Facebook">
-            <!-- Facebook (fill marrone, pulito e leggibile) -->
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M14.5 8.5H16V6h-1.5C12.6 6 11.5 7.2 11.5 9v2H10v2.7h1.5V21h2.8v-7.3H16l.4-2.7h-2.1V9.3c0-.5.3-.8.8-.8z"/>
             </svg>
@@ -552,17 +512,15 @@
 
           <a class="soc ig-open" href="https://www.instagram.com/azienda_agricola_moretti/"
              rel="noopener noreferrer" referrerpolicy="no-referrer" aria-label="Instagram" data-ig="azienda_agricola_moretti">
-            <!-- Instagram (fill marrone, semplice) -->
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"/>
-              <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
-              <path d="M17.6 6.4a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              <path d="M16.5 2h-9A5.5 5.5 0 0 0 2 7.5v9A5.5 5.5 0 0 0 7.5 22h9A5.5 5.5 0 0 0 22 16.5v-9A5.5 5.5 0 0 0 16.5 2Zm3.2 14.5a3.2 3.2 0 0 1-3.2 3.2h-9a3.2 3.2 0 0 1-3.2-3.2v-9a3.2 3.2 0 0 1 3.2-3.2h9a3.2 3.2 0 0 1 3.2 3.2v9Z"/>
+              <path d="M12 7.2A4.8 4.8 0 1 0 16.8 12 4.81 4.81 0 0 0 12 7.2Zm0 7.3A2.5 2.5 0 1 1 14.5 12 2.5 2.5 0 0 1 12 14.5Z"/>
+              <path d="M17.5 6.4a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1Z"/>
             </svg>
           </a>
 
           <a class="soc" href="https://www.tiktok.com/@aziendamoretti"
              target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" aria-label="TikTok">
-            <!-- TikTok (fill marrone, leggibile) -->
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M16.5 3c1.2 1.7 2.9 2.9 4.9 3v3.1c-1.9-.1-3.7-.8-5.2-1.9v6.2a6 6 0 1 1-6-6c.4 0 .8 0 1.2.1v3.3a2.7 2.7 0 1 0 1.9 2.6V3h3.2z"/>
             </svg>
