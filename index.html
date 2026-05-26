@@ -2,887 +2,802 @@
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-
-  <title>Azienda Agricola Moretti</title>
-  <meta name="description" content="Hub contatti - Azienda Agricola Moretti" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Azienda Agricola Moretti | Hub contatti</title>
+  <meta name="description" content="Hub ufficiale Azienda Agricola Moretti: WhatsApp, telefono, shop online, orari, indicazioni, forniture B2B e social." />
   <link rel="canonical" href="https://azienda-agricola-moretti.github.io/azienda-agricola-moretti/" />
-
+  <meta name="theme-color" content="#4A2F22" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="it_IT" />
   <meta property="og:title" content="Azienda Agricola Moretti" />
-  <meta property="og:description" content="Contatti, indicazioni, social e sito ufficiale" />
+  <meta property="og:description" content="WhatsApp, telefono, shop online, orari, indicazioni, forniture B2B e social." />
   <meta property="og:url" content="https://azienda-agricola-moretti.github.io/azienda-agricola-moretti/" />
-  <meta property="og:image" content="https://azienda-agricola-moretti.github.io/azienda-agricola-moretti/og.jpg" />
-
-  <meta name="theme-color" content="#2C1C14" />
-  <meta name="referrer" content="no-referrer" />
-
-  <!-- Best-effort CSP for static hosting (GitHub Pages) -->
-  <meta http-equiv="Content-Security-Policy"
-    content="
-      default-src 'self';
-      img-src 'self' https: data:;
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-      font-src https://fonts.gstatic.com;
-      script-src 'self' 'unsafe-inline';
-      frame-src https://www.youtube.com https://www.youtube-nocookie.com;
-      child-src https://www.youtube.com https://www.youtube-nocookie.com;
-      connect-src 'self';
-      base-uri 'self';
-      form-action 'self';
-      upgrade-insecure-requests;
-    ">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:image" content="https://azienda-agricola-moretti.github.io/azienda-agricola-moretti/logo%20moretti.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Azienda Agricola Moretti" />
+  <meta name="twitter:description" content="Hub ufficiale contatti, shop, orari, indicazioni e social." />
+  <meta name="twitter:image" content="https://azienda-agricola-moretti.github.io/azienda-agricola-moretti/logo%20moretti.jpg" />
 
   <style>
     :root{
-      --brand:#2C1C14;
-
-      --bg:#FFFFFF;
-      --ivory:#FBF8F5;
-
-      --text:#0B1220;
-      --muted: rgba(78,74,69,.84);
-
-      --shadow: 0 14px 34px rgba(11,18,32,.08);
-      --shadow2: 0 10px 22px rgba(11,18,32,.08);
-      --radius:24px;
-
-      --focus: rgba(44,28,20,.18);
-
-      --tap:44px;
+      --brand:#4A2F22;
+      --brand-dark:#352116;
+      --brand-soft:#F5EDE2;
+      --bg:#FCF8F1;
+      --card:#FFFFFF;
+      --text:#1E1712;
+      --muted:#71675D;
+      --line:#EDE4D8;
+      --shadow:0 10px 26px rgba(44,28,20,.055);
     }
 
     *{box-sizing:border-box}
-    html,body{margin:0}
+
+    html{
+      -webkit-text-size-adjust:100%;
+      text-size-adjust:100%;
+      scroll-behavior:smooth;
+    }
 
     body{
-      font-family:"Montserrat", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:var(--text);
-      background: var(--bg);
-      padding:22px 14px calc(108px + env(safe-area-inset-bottom));
-      -webkit-text-size-adjust:100%;
-      text-rendering: optimizeLegibility;
-    }
-
-    a, button { -webkit-tap-highlight-color: transparent; }
-
-    .wrap{max-width:640px;margin:0 auto}
-    .card{
-      background:#fff;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-
-    /* ✅ LOGO più grande */
-    .logo-wrap{
-      display:flex;
-      justify-content:center;
-      padding: clamp(18px, 5vw, 34px) 16px;
-      background:#fff;
-    }
-    .logo{
-      display:block;
-      width: min(620px, 96vw);
-      height:auto;
-      max-height:150px;
-      object-fit:contain;
-    }
-
-    /* ✅ HERO più arioso + leggibile */
-    .hero{
-      position:relative;
-      padding: clamp(22px, 5vw, 34px) 20px;
-      text-align:center;
-      background: var(--ivory);
-      overflow:hidden;
-      border-bottom: 1px solid rgba(44,28,20,.08);
-    }
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(rgba(251,248,245,.92), rgba(251,248,245,.92)),
-        url("./hero-bg.jpg") center / cover no-repeat;
-      filter: grayscale(6%) contrast(.98) brightness(1.03);
-      z-index:0;
-    }
-    .hero > *{position:relative; z-index:1;}
-
-    h1{
       margin:0;
-      font-size: clamp(24px, 5.6vw, 36px);
-      letter-spacing:-.04em;
-      line-height:1.08;
-      font-weight:800;
-      color: var(--brand);
-    }
-
-    .sub{
-      margin:12px auto 0;
-      max-width:560px;
-      color: var(--muted);
-      font-size:15px;
-      line-height:1.45;
-      font-weight:650;
-    }
-    .sub strong{font-weight:900;color:var(--brand);}
-
-    /* ✅ Pills più pulite */
-    .pills{
-      margin: 14px auto 0;
-      display:flex;
-      gap:10px;
-      justify-content:center;
-      flex-wrap:wrap;
-      max-width: 560px;
-    }
-    .pill{
-      font-size:12px;
-      font-weight:900;
-      letter-spacing:.02em;
-      padding: 8px 12px;
-      border-radius:999px;
-      background: rgba(255,255,255,.85);
-      border:1px solid rgba(44,28,20,.10);
-      color: rgba(44,28,20,.92);
-      white-space:nowrap;
-    }
-
-    .actions{
-      padding:14px 18px 18px;
-      display:grid;
-      grid-template-columns:1fr;
-      gap:12px;
-      background:#fff;
-    }
-    @media (min-width:420px){
-      .actions{ grid-template-columns: 1fr 1fr; }
-    }
-
-    .btn{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      text-decoration:none;
-      border-radius:18px;
-      padding:16px 16px;
-      font-weight:900;
-      border:1px solid rgba(44,28,20,.10);
-      background:#fff;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       color:var(--text);
-      box-shadow:0 1px 0 rgba(11,18,32,.03);
-      transition: transform .08s ease, box-shadow .18s ease, border-color .18s ease;
-      min-width:0;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-      cursor:pointer;
-      min-height: var(--tap);
-    }
-    .btn:hover{box-shadow:var(--shadow2); transform:translateY(-1px); border-color: rgba(44,28,20,.18)}
-    .btn:active{transform:translateY(0px); box-shadow:0 8px 18px rgba(11,18,32,.10)}
-    .btn:focus{outline:none}
-    .btn:focus-visible{outline:3px solid var(--focus); outline-offset:2px}
-
-    .btn.primary{
-      background:var(--brand);
-      color:#fff;
-      border-color:transparent;
-      box-shadow:0 14px 26px rgba(44,28,20,.18);
-    }
-
-    .i{
-      width:20px;height:20px;
-      stroke: var(--brand);
-      stroke-width:2;
-      fill:none;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-      flex:0 0 auto;
-      display:block;
-      margin-top:1px;
-    }
-    .btn.primary .i, .sbtn.primary .i{ stroke:#fff; }
-
-    .wa-fill{
-      width:20px;height:20px;
-      flex:0 0 auto;
-      display:block;
-      color: currentColor;
-    }
-
-    .section{
-      padding:18px;
-      background:#fff;
-    }
-    .section.alt{ background: var(--ivory); }
-
-    .section h2{
-      margin:0 0 12px;
-      font-size:13px;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      color:rgba(78,74,69,.82);
-      font-weight:900;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:12px;
-    }
-    @media (min-width:560px){
-      .grid{grid-template-columns:1fr 1fr}
-    }
-
-    .tile{
-      display:flex;
-      align-items:flex-start;
-      gap:12px;
-      padding:14px;
-      border:1px solid rgba(44,28,20,.10);
-      border-radius:18px;
-      background:#fff;
-      transition: box-shadow .18s ease, transform .08s ease, border-color .18s ease;
-      min-width:0;
-    }
-    .section.alt .tile{ background: rgba(255,255,255,.92); }
-    .tile:hover{
-      box-shadow:var(--shadow2);
-      transform:translateY(-1px);
-      border-color: rgba(44,28,20,.18);
-    }
-
-    .tile b{display:block; font-weight:900; color:var(--brand);}
-    .small{color:rgba(78,74,69,.86);font-size:13px;margin-top:4px;line-height:1.45;font-weight:600}
-
-    .tile a{color:inherit;text-decoration:none}
-    .tile a:hover{text-decoration:underline}
-
-    .tile.noicon{ gap:0; }
-    .tile.noicon b{ margin:0; }
-
-    /* CTA tap-friendly dentro tile */
-    .mini-actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:10px;
-    }
-    .mini-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height: var(--tap);
-      padding: 10px 12px;
-      border-radius: 14px;
-      border:1px solid rgba(44,28,20,.10);
-      background:#fff;
-      font-weight:900;
-      font-size:13px;
-      text-decoration:none;
-      color:var(--text);
-      box-shadow:0 1px 0 rgba(11,18,32,.03);
-    }
-    .mini-btn:focus{outline:none}
-    .mini-btn:focus-visible{outline:3px solid var(--focus); outline-offset:2px}
-
-    /* Orari più leggibili */
-    .hours{
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      margin-top:8px;
-    }
-    .row{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      padding: 10px 12px;
-      border-radius: 14px;
-      background: rgba(255,255,255,.7);
-      border:1px solid rgba(44,28,20,.08);
-      font-size:13px;
-      font-weight:800;
-      color: rgba(44,28,20,.9);
-    }
-    .row span:last-child{color: rgba(78,74,69,.92); font-weight:900}
-    .row.muted{opacity:.75}
-
-    /* ✅ VIDEO: click-to-load (compatibile) + overlay */
-    .video{
-      margin:14px auto 0;
-      max-width: 600px;
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow: 0 14px 30px rgba(0,0,0,.10);
-      border:1px solid rgba(44,28,20,.10);
-      background:#000;
-      position:relative;
-      aspect-ratio: 16/9;
-    }
-    .video button{
-      all:unset;
-      cursor:pointer;
-      display:block;
-      width:100%;
-      height:100%;
-      position:relative;
       background:
-        linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
-        url("./video-poster.jpg") center / cover no-repeat;
+        radial-gradient(circle at top, rgba(74,47,34,.055), transparent 300px),
+        linear-gradient(180deg,#fff 0%,var(--bg) 44%,#fff 100%);
+      padding:14px 10px calc(104px + env(safe-area-inset-bottom));
     }
-    .video button:focus{outline:none}
-    .video button:focus-visible{outline:3px solid var(--focus); outline-offset:2px}
-    .play{
-      position:absolute;
-      inset:0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .play span{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:64px;
-      height:64px;
-      border-radius:999px;
-      background: rgba(255,255,255,.92);
-      border:1px solid rgba(44,28,20,.18);
-      box-shadow: 0 10px 26px rgba(0,0,0,.18);
-    }
-    .play svg{ width:26px; height:26px; fill: var(--brand); transform: translateX(1px); }
 
-    .video iframe{
-      display:block;
+    a{color:inherit}
+
+    img,svg{
+      max-width:100%;
+    }
+
+    a:focus-visible{
+      outline:3px solid rgba(74,47,34,.22);
+      outline-offset:3px;
+    }
+
+    .page{
       width:100%;
-      height:100%;
+      max-width:680px;
+      margin:0 auto;
+    }
+
+    .shell{
+      overflow:hidden;
+      background:rgba(255,255,255,.94);
+      border:1px solid rgba(74,47,34,.08);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
       border:0;
     }
 
-    .social-row{
+    .logo-bar{
       display:flex;
-      gap:16px;
       justify-content:center;
       align-items:center;
-      flex-wrap:wrap;
-      padding-top:2px;
+      padding:24px 18px 19px;
+      background:#fff;
+      border-bottom:1px solid rgba(74,47,34,.075);
     }
-    .soc{
-      width:var(--tap);
-      height:var(--tap);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-decoration:none;
-      background: rgba(255,255,255,.75);
-      border-radius:999px;
-      border:1px solid rgba(44,28,20,.10);
-      transition: transform .08s ease, box-shadow .18s ease, border-color .18s ease;
-      box-shadow: 0 10px 20px rgba(11,18,32,.06);
-    }
-    .soc:hover{
-      transform: translateY(-1px);
-      box-shadow: var(--shadow2);
-      border-color: rgba(44,28,20,.18);
-    }
-    .soc:focus{outline:none}
-    .soc:focus-visible{outline:3px solid var(--focus); outline-offset:2px}
-    .soc svg{ width:22px; height:22px; display:block; }
-    .soc svg path{ fill: var(--brand); }
 
-    .sticky{
-      position:fixed;
-      left:0; right:0; bottom:0;
-      padding:10px 12px calc(12px + env(safe-area-inset-bottom));
-      background:rgba(251,248,245,.92);
-      backdrop-filter: blur(12px);
-      border-top:1px solid rgba(231,225,219,.95);
-      z-index:999;
+    .logo{
+      display:block;
+      width:min(570px,94vw);
+      max-height:118px;
+      object-fit:contain;
     }
-    .sticky .inner{
-      max-width:640px;
+
+    .hero{
+      text-align:center;
+      padding:23px 20px 21px;
+      background:linear-gradient(180deg,#fff,var(--brand-soft));
+      border-bottom:1px solid rgba(74,47,34,.075);
+    }
+
+    .claim{
       margin:0 auto;
-      display:grid;
-      grid-template-columns: 2fr 1fr 1fr; /* WhatsApp più importante */
-      gap:10px;
+      max-width:560px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.5;
+      font-weight:700;
+      text-wrap:balance;
     }
-    .sbtn{
+
+    .claim strong{
+      display:block;
+      margin-bottom:10px;
+      color:var(--brand);
+      font-size:clamp(20px,5.35vw,29px);
+      line-height:1.16;
+      letter-spacing:-.026em;
+      font-weight:850;
+      text-wrap:balance;
+    }
+
+    .actions{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      padding:17px 18px 18px;
+      background:#fff;
+      border-bottom:1px solid rgba(74,47,34,.075);
+    }
+
+    .btn{
+      min-height:48px;
       display:flex;
       align-items:center;
       justify-content:center;
       gap:8px;
       padding:12px 10px;
-      border-radius:18px;
-      border:1px solid rgba(44,28,20,.10);
-      background:#fff;
-      color:var(--text);
-      font-weight:900;
-      text-decoration:none;
-      box-shadow:0 10px 20px rgba(11,18,32,.08);
-      font-size:14px;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-      min-height: var(--tap);
-    }
-    .sbtn.primary{
+      border-radius:15px;
       background:var(--brand);
       color:#fff;
-      border-color:transparent;
-      box-shadow:0 14px 26px rgba(44,28,20,.16);
-    }
-    .sbtn:focus{outline:none}
-    .sbtn:focus-visible{outline:3px solid var(--focus); outline-offset:2px}
-    .lbl{min-width:0; overflow:hidden; text-overflow:ellipsis}
-    @media (max-width:360px){
-      .lbl{display:none}
-      .sbtn{gap:0}
-      .sticky .inner{grid-template-columns: 1fr 1fr 1fr;}
+      text-align:center;
+      text-decoration:none;
+      font-size:13.6px;
+      line-height:1.15;
+      font-weight:800;
+      box-shadow:0 10px 18px rgba(74,47,34,.17);
     }
 
-    @media (prefers-reduced-motion: reduce){
-      *{scroll-behavior:auto !important}
-      .btn,.tile,.soc{transition:none}
-      .btn:hover,.tile:hover,.soc:hover{transform:none}
+    .btn svg{
+      width:17px;
+      height:17px;
+      flex:0 0 auto;
+      display:block;
+      fill:none;
+      stroke:currentColor;
+      stroke-width:2;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      opacity:.95;
+    }
+
+    .section{
+      padding:22px 18px;
+      background:#fff;
+      border-bottom:1px solid rgba(74,47,34,.075);
+    }
+
+    .section.alt{
+      background:var(--bg);
+    }
+
+    .section:last-of-type{
+      border-bottom:0;
+    }
+
+    h2{
+      margin:0 0 13px;
+      color:var(--brand);
+      font-size:17px;
+      line-height:1.22;
+      letter-spacing:-.018em;
+      font-weight:850;
+      text-wrap:balance;
+    }
+
+    .hint{
+      margin:-6px 0 13px;
+      color:var(--muted);
+      font-size:12.8px;
+      line-height:1.48;
+      font-weight:600;
+    }
+
+    .grid{
+      display:grid;
+      gap:11px;
+    }
+
+    @media (min-width:620px){
+      .grid.two{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    .tile{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      min-width:0;
+      padding:16px;
+      border-radius:18px;
+      border:1px solid rgba(74,47,34,.11);
+      background:#fff;
+      color:inherit;
+      text-decoration:none;
+      box-shadow:0 7px 18px rgba(44,28,20,.038);
+    }
+
+    .tile-title{
+      display:block;
+      color:var(--brand);
+      font-size:13.8px;
+      line-height:1.28;
+      font-weight:800;
+    }
+
+    .tile-text{
+      display:block;
+      margin-top:4px;
+      color:var(--muted);
+      font-size:12.6px;
+      line-height:1.48;
+      font-weight:600;
+    }
+
+    .icon{
+      width:22px;
+      height:22px;
+      flex:0 0 auto;
+      color:var(--brand);
+      opacity:.88;
+      margin-top:1px;
+    }
+
+    .icon svg{
+      display:block;
+      width:100%;
+      height:100%;
+      fill:none;
+      stroke:currentColor;
+      stroke-width:1.9;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:11px;
+    }
+
+    .product-card{
+      display:block;
+      min-width:0;
+      padding:16px;
+      border-radius:18px;
+      border:1px solid rgba(74,47,34,.11);
+      background:#fff;
+      color:inherit;
+      text-decoration:none;
+      box-shadow:0 7px 18px rgba(44,28,20,.038);
+    }
+
+    .product-card b{
+      display:block;
+      color:var(--brand);
+      font-size:14.5px;
+      line-height:1.25;
+      font-weight:800;
+    }
+
+    .product-card span{
+      display:block;
+      margin-top:5px;
+      color:var(--muted);
+      font-size:12.6px;
+      line-height:1.45;
+      font-weight:600;
+    }
+
+    .b2b{
+      padding:19px;
+      border-radius:22px;
+      background:linear-gradient(135deg,var(--brand),#6A4634);
+      color:#fff;
+      box-shadow:0 15px 32px rgba(74,47,34,.17);
+    }
+
+    .b2b h2{
+      margin-bottom:7px;
+      color:#fff;
+    }
+
+    .b2b p{
+      margin:0;
+      color:rgba(255,255,255,.82);
+      font-size:12.8px;
+      line-height:1.48;
+      font-weight:600;
+    }
+
+    .mini-cta{
+      display:inline-flex;
+      margin-top:13px;
+      padding:11px 14px;
+      border-radius:999px;
+      background:#fff;
+      color:var(--brand);
+      text-decoration:none;
+      font-weight:800;
+      font-size:12.8px;
+    }
+
+    .video-link{
+      display:grid;
+      place-items:center;
+      min-height:160px;
+      padding:24px;
+      border-radius:20px;
+      background:linear-gradient(135deg,rgba(74,47,34,.96),rgba(106,70,52,.90));
+      color:#fff;
+      text-align:center;
+      text-decoration:none;
+      box-shadow:0 12px 26px rgba(0,0,0,.10);
+    }
+
+    .play{
+      width:54px;
+      height:54px;
+      display:grid;
+      place-items:center;
+      margin:0 auto 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.15);
+    }
+
+    .play svg{
+      width:24px;
+      height:24px;
+      fill:#fff;
+    }
+
+    .video-link b{
+      display:block;
+      font-size:14px;
+      font-weight:800;
+    }
+
+    .video-link span{
+      display:block;
+      margin-top:5px;
+      color:rgba(255,255,255,.78);
+      font-size:12.5px;
+      font-weight:700;
+    }
+
+    .socials{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px;
+    }
+
+    @media (min-width:560px){
+      .socials{
+        grid-template-columns:repeat(4,1fr);
+      }
+    }
+
+    .socials a{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:7px;
+      min-height:66px;
+      border-radius:17px;
+      border:1px solid rgba(74,47,34,.10);
+      color:var(--brand);
+      text-decoration:none;
+      font-size:12.4px;
+      font-weight:800;
+    }
+
+    .socials svg{
+      display:block;
+      width:24px;
+      height:24px;
+      fill:currentColor;
+      opacity:.92;
+    }
+
+    .footer{
+      padding:19px 18px;
+      background:#fff;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      text-align:center;
+      font-size:11.8px;
+      line-height:1.5;
+      font-weight:600;
+    }
+
+    .sticky{
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index:999;
+      padding:10px 12px calc(12px + env(safe-area-inset-bottom));
+      background:rgba(252,248,241,.90);
+      border-top:1px solid rgba(237,228,216,.95);
+      backdrop-filter:blur(14px);
+    }
+
+    .sticky-inner{
+      max-width:680px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:9px;
+    }
+
+    .sticky a{
+      min-height:46px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:15px;
+      background:var(--brand);
+      color:#fff;
+      text-decoration:none;
+      font-size:12.9px;
+      line-height:1;
+      font-weight:800;
+      box-shadow:0 9px 18px rgba(74,47,34,.14);
+    }
+
+    @media(max-width:430px){
+      body{
+        padding:12px 10px calc(102px + env(safe-area-inset-bottom));
+      }
+
+      .shell{
+        border-radius:22px;
+      }
+
+      .logo-bar{
+        padding:22px 14px 17px;
+      }
+
+      .logo{
+        width:min(520px,96vw);
+        max-height:108px;
+      }
+
+      .hero{
+        padding:21px 16px 20px;
+      }
+
+      .claim strong{
+        font-size:clamp(19.5px,5.6vw,24px);
+        line-height:1.18;
+      }
+
+      .actions{
+        padding:15px 14px 16px;
+        gap:9px;
+      }
+
+      .section{
+        padding:20px 15px;
+      }
+
+      .tile{
+        padding:15px;
+        border-radius:17px;
+      }
+
+      .sticky{
+        padding:9px 10px calc(11px + env(safe-area-inset-bottom));
+      }
+    }
+
+    @media(max-width:375px){
+      body{
+        padding-inline:8px;
+      }
+
+      .shell{
+        border-radius:20px;
+      }
+
+      .logo-bar{
+        padding:20px 12px 16px;
+      }
+
+      .logo{
+        max-height:98px;
+      }
+
+      .claim{
+        font-size:13.4px;
+      }
+
+      .claim strong{
+        font-size:clamp(19px,5.8vw,22px);
+        margin-bottom:9px;
+      }
+
+      .btn{
+        min-height:46px;
+        gap:6px;
+        padding:11px 8px;
+        border-radius:14px;
+        font-size:12.5px;
+      }
+
+      .btn svg{
+        width:15px;
+        height:15px;
+      }
+
+      .product-card{
+        padding:14px;
+        border-radius:16px;
+      }
+
+      .product-card b{
+        font-size:13.6px;
+      }
+
+      .product-card span{
+        font-size:12.1px;
+      }
+
+      .sticky-inner{
+        gap:7px;
+      }
+
+      .sticky a{
+        min-height:44px;
+        border-radius:14px;
+        font-size:11.7px;
+      }
+    }
+
+    @media(max-width:340px){
+      body{
+        padding-inline:6px;
+      }
+
+      .actions{
+        padding-inline:10px;
+        gap:8px;
+      }
+
+      .btn{
+        font-size:11.8px;
+      }
+
+      .btn svg{
+        display:none;
+      }
+
+      .section{
+        padding:18px 13px;
+      }
+
+      .tile{
+        gap:10px;
+        padding:14px;
+      }
+
+      .icon{
+        width:20px;
+        height:20px;
+      }
+
+      .product-grid{
+        gap:8px;
+      }
+
+      .product-card{
+        padding:13px;
+      }
+
+      .socials{
+        gap:8px;
+      }
+
+      .sticky{
+        padding-inline:7px;
+      }
+
+      .sticky a{
+        font-size:11.2px;
+      }
+    }
+
+    @media(min-width:768px){
+      body{
+        padding-top:28px;
+      }
+
+      .shell{
+        border-radius:28px;
+      }
+
+      .logo-bar{
+        padding-top:30px;
+        padding-bottom:23px;
+      }
+
+      .hero{
+        padding-top:28px;
+        padding-bottom:26px;
+      }
+
+      .actions{
+        padding:20px;
+      }
+
+      .section{
+        padding:24px 22px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="card">
-
-      <div class="logo-wrap">
-        <img class="logo" src="./logo%20moretti.jpg" alt="Azienda Agricola Moretti" loading="eager" decoding="async">
+  <main class="page">
+    <article class="shell" aria-label="Hub ufficiale Azienda Agricola Moretti">
+      <div class="logo-bar">
+        <img class="logo" src="https://azienda-agricola-moretti.github.io/azienda-agricola-moretti/logo%20moretti.jpg" alt="Azienda Agricola Moretti" loading="eager" decoding="async" />
       </div>
 
-      <div class="hero">
-        <h1>Azienda Agricola Moretti</h1>
-        <div class="sub">
-          <strong>Funghi km 0</strong> • Fresco • Linea gelo • Trasformati • Forniture B2B<br>
-          Marino (RM) • Store Eataly Roma
-        </div>
+      <header class="hero">
+        <h1 class="sr-only">Azienda Agricola Moretti</h1>
+        <p class="claim">
+          <strong>Funghi coltivati in grotta a Km0</strong>
+          Fresco • Gelo • Trasformati • Tartufi
+        </p>
+      </header>
 
-        <!-- ✅ Solo 2 pill (più premium) -->
-        <div class="pills" aria-label="Punti di forza">
-          <div class="pill">KM 0</div>
-          <div class="pill">B2B &amp; Privati</div>
-        </div>
-      </div>
-
-      <div class="actions" aria-label="Azioni principali">
-        <a class="btn primary" id="waTop" href="#" aria-label="Scrivi su WhatsApp">
-          <svg class="wa-fill" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M12.04 2C6.57 2 2.13 6.44 2.13 11.91c0 1.73.45 3.42 1.3 4.9L2 22l5.33-1.4a9.86 9.86 0 0 0 4.71 1.2h.01c5.47 0 9.9-4.44 9.9-9.9C21.95 6.44 17.51 2 12.04 2zm5.76 14.3c-.24.68-1.4 1.3-1.92 1.38-.48.07-1.1.1-1.78-.11-.41-.13-.93-.3-1.6-.6-2.82-1.22-4.66-4.1-4.8-4.29-.13-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33.25-.28.56-.35.74-.35h.54c.17 0 .4-.03.62.47.24.58.81 2 .88 2.14.07.15.11.32.02.51-.08.19-.13.32-.26.49-.13.17-.27.38-.39.5-.13.13-.26.27-.11.52.15.25.68 1.12 1.46 1.81 1 .88 1.84 1.15 2.1 1.28.26.13.41.11.56-.06.15-.17.64-.74.81-1 .17-.26.34-.21.57-.13.24.08 1.5.71 1.75.84.26.13.43.19.49.3.06.11.06.64-.18 1.32z"/>
-          </svg>
-          Chiedi disponibilità
+      <section class="actions" aria-label="Azioni principali">
+        <a class="btn" href="https://wa.me/393791162891?text=Salve%2C%20ho%20scansionato%20il%20vostro%20QR%20code%20e%20vorrei%20informazioni%20su%20prodotti%20e%20disponibilit%C3%A0.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.7 7.1L4 19.7l1.2-4.1A8 8 0 1 1 20 11.5Z"/><path d="M8.7 8.3c.4 3.1 2.9 5.6 6 6"/></svg>
+          <span>WhatsApp</span>
         </a>
-
-        <a class="btn" href="tel:+390688936064" aria-label="Chiama">
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-          Chiama
+        <a class="btn" href="tel:+390688936064">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 17.8 17.8 0 0 1-7.8-2.8 17.4 17.4 0 0 1-5.4-5.4 17.8 17.8 0 0 1-2.8-7.8A2 2 0 0 1 4.8 3h3a2 2 0 0 1 2 1.7c.1.8.3 1.6.6 2.4a2 2 0 0 1-.5 2.1L8.8 10.3a14 14 0 0 0 4.9 4.9l1.1-1.1a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.4.6A2 2 0 0 1 21 16.5Z"/></svg>
+          <span>Chiama</span>
         </a>
-
-        <a class="btn"
-           href="https://www.google.com/maps/dir/?api=1&destination=Via+Paolo+Mercuri+23+00047+Marino+RM"
-           target="_blank" rel="noopener noreferrer"
-           aria-label="Naviga">
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 10l-9 11-9-11a9 9 0 1 1 18 0z"/>
-            <path d="M12 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
-          </svg>
-          Naviga
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Via+Paolo+Mercuri+23+00047+Marino+RM" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.1 6-11a6 6 0 0 0-12 0c0 5.9 6 11 6 11Z"/><circle cx="12" cy="10" r="2.2"/></svg>
+          <span>Apri mappa</span>
         </a>
+        <a class="btn" href="./moretti.vcf" download="Azienda_Agricola_Moretti.vcf">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="11" cy="7" r="4"/><path d="M19 8v6"/><path d="M16 11h6"/></svg>
+          <span>Salva contatto</span>
+        </a>
+      </section>
 
-        <button class="btn" type="button" id="saveContact" aria-label="Salva contatto">
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-          </svg>
-          Salva contatto
-        </button>
-      </div>
-
-      <div class="section alt">
-        <h2>Shop</h2>
-        <div class="grid">
-          <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-            <div>
-              <b>Sito ufficiale</b>
-              <div class="small">
-                <a href="https://aziendamoretti.com/" target="_blank" rel="noopener noreferrer">
-                  Visita aziendamoretti.com
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <h2>Dove ci trovi</h2>
-        <div class="grid">
-          <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
-              <circle cx="12" cy="11" r="2"/>
-            </svg>
-            <div>
-              <b>Azienda (Marino)</b>
-              <div class="small">Via Paolo Mercuri, 23 · 00047 Marino (RM)</div>
-              <div class="mini-actions">
-                <a class="mini-btn" href="https://www.google.com/maps/search/?api=1&query=Via+Paolo+Mercuri+23+00047+Marino+RM"
-                   target="_blank" rel="noopener noreferrer">Apri mappa</a>
-                <a class="mini-btn" href="https://www.google.com/maps/dir/?api=1&destination=Via+Paolo+Mercuri+23+00047+Marino+RM"
-                   target="_blank" rel="noopener noreferrer">Indicazioni</a>
-              </div>
-            </div>
-          </div>
+      <section class="section alt">
+        <h2>Shop e orari</h2>
+        <div class="grid two">
+          <a class="tile" href="https://aziendamoretti.com/" target="_blank" rel="noopener noreferrer">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6 6h15l-2 8H8L6 6Z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+            </span>
+            <span>
+              <b class="tile-title">Shop ufficiale</b>
+              <span class="tile-text">Prodotti, disponibilità e ordini online.</span>
+            </span>
+          </a>
 
           <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
-              <circle cx="12" cy="11" r="2"/>
-            </svg>
-            <div>
-              <b>Store Eataly (Roma)</b>
-              <div class="small">Piazzale 12 Ottobre 1492 · 00154 Roma (RM)</div>
-              <div class="mini-actions">
-                <a class="mini-btn" href="https://www.google.com/maps/search/?api=1&query=Piazzale+12+Ottobre+1492+00154+Roma+RM"
-                   target="_blank" rel="noopener noreferrer">Apri mappa</a>
-                <a class="mini-btn" href="https://www.google.com/maps/dir/?api=1&destination=Piazzale+12+Ottobre+1492+00154+Roma+RM"
-                   target="_blank" rel="noopener noreferrer">Indicazioni</a>
-              </div>
-            </div>
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg>
+            </span>
+            <span>
+              <b class="tile-title">Orari sede</b>
+              <span class="tile-text">Lun–Sab: 09:00–13:30 · 16:00–20:00<br>Dom: chiuso</span>
+            </span>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="section">
-        <h2>Orari (Marino)</h2>
-        <div class="grid">
-          <div class="tile">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6v6l4 2"/>
-            </svg>
-            <div>
-              <b>Apertura</b>
-              <div class="hours" role="list">
-                <div class="row" role="listitem"><span>Lun–Sab</span><span>09–13:30 · 16–20</span></div>
-                <div class="row muted" role="listitem"><span>Dom</span><span>Chiuso</span></div>
-              </div>
-            </div>
-          </div>
+      <section class="section">
+        <h2>Dove siamo</h2>
+        <div class="grid two">
+          <a class="tile" href="https://www.google.com/maps/search/?api=1&query=Via+Paolo+Mercuri+23+00047+Marino+RM" target="_blank" rel="noopener noreferrer">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-12a7 7 0 1 0-14 0c0 6.4 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </span>
+            <span>
+              <b class="tile-title">Sede Marino</b>
+              <span class="tile-text">Via Paolo Mercuri, 23 · 00047 Marino (RM)</span>
+            </span>
+          </a>
+
+          <a class="tile" href="https://www.google.com/maps/search/?api=1&query=Piazzale+12+Ottobre+1492+00154+Roma+RM" target="_blank" rel="noopener noreferrer">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-12a7 7 0 1 0-14 0c0 6.4 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </span>
+            <span>
+              <b class="tile-title">Punto Eataly Roma Ostiense</b>
+              <span class="tile-text">Piazzale 12 Ottobre 1492 · 00154 Roma (RM)</span>
+            </span>
+          </a>
         </div>
-      </div>
+      </section>
 
-      <div class="section alt">
-        <h2>Le nostre produzioni</h2>
-        <div class="grid">
-          <div class="tile noicon">
-            <div>
-              <b>Funghi freschi</b>
-              <div class="small">Selezione giornaliera da produzione propria, qualità e tracciabilità.</div>
-            </div>
-          </div>
-
-          <div class="tile noicon">
-            <div>
-              <b>Linea gelo</b>
-              <div class="small">Conservazione studiata per mantenere gusto e caratteristiche del prodotto.</div>
-            </div>
-          </div>
-
-          <div class="tile noicon">
-            <div>
-              <b>Trasformati</b>
-              <div class="small">Lavorazioni controllate e ricette pensate per valorizzare la materia prima.</div>
-            </div>
-          </div>
-
-          <div class="tile noicon">
-            <div>
-              <b>Collaborazioni &amp; Forniture (B2B)</b>
-              <div class="small">
-                <a href="https://aziendamoretti.com/pages/collaborazioni" target="_blank" rel="noopener noreferrer">
-                  Vai al form B2B
-                </a>
-              </div>
-            </div>
-          </div>
+      <section class="section alt">
+        <h2>Prodotti</h2>
+        <div class="product-grid">
+          <a class="product-card" href="https://aziendamoretti.com/" target="_blank" rel="noopener noreferrer"><b>Funghi freschi</b><span>Consulta disponibilità e ordini.</span></a>
+          <a class="product-card" href="https://aziendamoretti.com/" target="_blank" rel="noopener noreferrer"><b>Gelo</b><span>Linea gelo Moretti.</span></a>
+          <a class="product-card" href="https://aziendamoretti.com/" target="_blank" rel="noopener noreferrer"><b>Trasformati</b><span>Specialità e lavorazioni.</span></a>
+          <a class="product-card" href="https://aziendamoretti.com/" target="_blank" rel="noopener noreferrer"><b>Tartufi</b><span>Disponibilità e specialità.</span></a>
         </div>
-      </div>
+      </section>
 
-      <div class="section">
+      <section class="section">
+        <div class="b2b">
+          <h2>Forniture B2B</h2>
+          <p>Per ristoranti, catering, negozi e attività food.</p>
+          <a class="mini-cta" href="https://aziendamoretti.com/pages/collaborazioni" target="_blank" rel="noopener noreferrer">Richiedi fornitura B2B</a>
+        </div>
+      </section>
+
+      <section class="section alt">
         <h2>Video</h2>
-        <div class="video" aria-label="Video di presentazione">
-          <button type="button" id="loadVideo" aria-label="Riproduci video">
-            <div class="play" aria-hidden="true">
-              <span>
-                <svg viewBox="0 0 24 24"><path d="M9 7v10l9-5-9-5z"/></svg>
-              </span>
-            </div>
-          </button>
-        </div>
+        <a class="video-link" href="https://www.youtube.com/watch?v=bsgln3b1mOc" target="_blank" rel="noopener noreferrer">
+          <span>
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <b>Apri video su YouTube</b>
+            <span>Tocca per guardare</span>
+          </span>
+        </a>
+      </section>
 
-        <div class="small" style="text-align:center;margin-top:10px;">
-          Tocca per riprodurre (caricamento ottimizzato)
-        </div>
-
-        <!-- ✅ Fallback sempre funzionante -->
-        <div style="text-align:center;margin-top:10px;">
-          <a id="ytFallback" class="mini-btn" target="_blank" rel="noopener noreferrer"
-             href="https://www.youtube.com/watch?v=bsgln3b1mOc">
-            Guarda su YouTube
-          </a>
-        </div>
-      </div>
-
-      <div class="section alt">
+      <section class="section">
         <h2>Social</h2>
-        <div class="social-row">
-          <a class="soc" href="https://www.facebook.com/p/Azienda-Agricola-Moretti-100054240050633/"
-             target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M14.5 8.5H16V6h-1.5C12.6 6 11.5 7.2 11.5 9v2H10v2.7h1.5V21h2.8v-7.3H16l.4-2.7h-2.1V9.3c0-.5.3-.8.8-.8z"/>
-            </svg>
+        <p class="hint">Novità, prodotti, disponibilità e contenuti dalla produzione.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/azienda_agricola_moretti/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Azienda Agricola Moretti">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8s.01 2.445.048 3.297c.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.445-.01 3.297-.048c.852-.04 1.433-.174 1.942-.372a3.9 3.9 0 0 0 1.417-.923 3.9 3.9 0 0 0 .923-1.416c.198-.51.333-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.297c-.04-.852-.174-1.433-.372-1.942a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42C12.732.222 12.15.087 11.3.048 10.445.01 10.173 0 8 0Zm0 3.892a4.108 4.108 0 1 1 0 8.216 4.108 4.108 0 0 1 0-8.216Zm4.27-.311a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92Z"/><path d="M8 5.333a2.667 2.667 0 1 0 0 5.334 2.667 2.667 0 0 0 0-5.334Z"/></svg>
+            <span>Instagram</span>
           </a>
-
-          <a class="soc ig-open" href="https://www.instagram.com/azienda_agricola_moretti/"
-             target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-ig="azienda_agricola_moretti">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M16.5 2h-9A5.5 5.5 0 0 0 2 7.5v9A5.5 5.5 0 0 0 7.5 22h9A5.5 5.5 0 0 0 22 16.5v-9A5.5 5.5 0 0 0 16.5 2Zm3.2 14.5a3.2 3.2 0 0 1-3.2 3.2h-9a3.2 3.2 0 0 1-3.2-3.2v-9a3.2 3.2 0 0 1 3.2-3.2h9a3.2 3.2 0 0 1 3.2 3.2v9Z"/>
-              <path d="M12 7.2A4.8 4.8 0 1 0 16.8 12 4.81 4.81 0 0 0 12 7.2Zm0 7.3A2.5 2.5 0 1 1 14.5 12 2.5 2.5 0 0 1 12 14.5Z"/>
-              <path d="M17.5 6.4a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1Z"/>
-            </svg>
+          <a href="https://www.facebook.com/p/Azienda-Agricola-Moretti-100054240050633/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Azienda Agricola Moretti">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M16 8.049C16 3.603 12.418 0 8 0S0 3.603 0 8.049C0 12.067 2.925 15.396 6.75 16v-5.624H4.719V8.05H6.75V6.275c0-2.017 1.194-3.131 3.022-3.131.875 0 1.79.157 1.79.157v1.98h-1.009c-.994 0-1.303.621-1.303 1.258v1.51h2.219l-.355 2.326H9.25V16C13.075 15.396 16 12.067 16 8.049Z"/></svg>
+            <span>Facebook</span>
           </a>
-
-          <a class="soc" href="https://www.tiktok.com/@aziendamoretti"
-             target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M16.5 3c1.2 1.7 2.9 2.9 4.9 3v3.1c-1.9-.1-3.7-.8-5.2-1.9v6.2a6 6 0 1 1-6-6c.4 0 .8 0 1.2.1v3.3a2.7 2.7 0 1 0 1.9 2.6V3h3.2z"/>
-            </svg>
+          <a href="https://www.tiktok.com/@aziendamoretti" target="_blank" rel="noopener noreferrer" aria-label="TikTok Azienda Agricola Moretti">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/></svg>
+            <span>TikTok</span>
+          </a>
+          <a href="https://t.me/Morettifunghi" target="_blank" rel="noopener noreferrer" aria-label="Telegram Azienda Agricola Moretti">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 4.2c.3-.1.7.2.6.5l-3 14.2c-.1.4-.5.6-.9.4l-4.7-3.5-2.4 2.3c-.2.2-.4.3-.7.3l.3-4.9 9-8.1c.2-.2-.1-.4-.3-.3l-11 6.9-4.7-1.5c-.5-.2-.5-.8 0-1l17.8-6.3Z"/></svg>
+            <span>Telegram</span>
           </a>
         </div>
-      </div>
+      </section>
 
+      <footer class="footer">
+        Via Paolo Mercuri, 23 · Marino (RM)<br>
+        <a href="mailto:azienda.moretti@libero.it">azienda.moretti@libero.it</a> · <a href="https://t.me/Morettifunghi" target="_blank" rel="noopener noreferrer">Telegram</a><br>
+        Hub contatti ufficiale.
+      </footer>
+    </article>
+  </main>
+
+  <nav class="sticky" aria-label="Azioni rapide mobile">
+    <div class="sticky-inner">
+      <a href="https://wa.me/393791162891?text=Salve%2C%20ho%20scansionato%20il%20vostro%20QR%20code%20e%20vorrei%20informazioni.">WhatsApp</a>
+      <a href="tel:+390688936064">Chiama</a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Paolo+Mercuri+23+00047+Marino+RM" target="_blank" rel="noopener noreferrer">Apri mappa</a>
     </div>
-  </div>
-
-  <div class="sticky" aria-label="Azioni rapide">
-    <div class="inner">
-      <a class="sbtn primary" id="waSticky" href="#" aria-label="WhatsApp">
-        <svg class="wa-fill" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="currentColor" d="M12.04 2C6.57 2 2.13 6.44 2.13 11.91c0 1.73.45 3.42 1.3 4.9L2 22l5.33-1.4a9.86 9.86 0 0 0 4.71 1.2h.01c5.47 0 9.9-4.44 9.9-9.9C21.95 6.44 17.51 2 12.04 2zm5.76 14.3c-.24.68-1.4 1.3-1.92 1.38-.48.07-1.1.1-1.78-.11-.41-.13-.93-.3-1.6-.6-2.82-1.22-4.66-4.1-4.8-4.29-.13-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33.25-.28.56-.35.74-.35h.54c.17 0 .4-.03.62.47.24.58.81 2 .88 2.14.07.15.11.32.02.51-.08.19-.13.32-.26.49-.13.17-.27.38-.39.5-.13.13-.26.27-.11.52.15.25.68 1.12 1.46 1.81 1 .88 1.84 1.15 2.1 1.28.26.13.41.11.56-.06.15-.17.64-.74.81-1 .17-.26.34-.21.57-.13.24.08 1.5.71 1.75.84.26.13.43.19.49.3.06.11.06.64-.18 1.32z"/>
-        </svg>
-        <span class="lbl">WhatsApp</span>
-      </a>
-
-      <a class="sbtn" href="tel:+390688936064" aria-label="Chiama">
-        <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-        </svg>
-        <span class="lbl">Chiama</span>
-      </a>
-
-      <a class="sbtn"
-         href="https://www.google.com/maps/dir/?api=1&destination=Via+Paolo+Mercuri+23+00047+Marino+RM"
-         target="_blank" rel="noopener noreferrer"
-         aria-label="Naviga">
-        <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M21 10l-9 11-9-11a9 9 0 1 1 18 0z"/>
-          <path d="M12 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
-        </svg>
-        <span class="lbl">Naviga</span>
-      </a>
-    </div>
-  </div>
-
-  <script>
-  (function(){
-    // =========================
-    // CONFIG (1 sola fonte verità)
-    // =========================
-    const CFG = {
-      whatsappNumber: 'WHATSAPP_NUMBER', // <-- sostituisci con 39XXXXXXXXXX (senza +)
-      whatsappMsgTop: 'Salve, ho scansionato il vostro QR code e vorrei informazioni su prodotti e disponibilità.',
-      whatsappMsgSticky: 'Salve, ho scansionato il vostro QR code e vorrei informazioni.',
-      instagramUser: 'azienda_agricola_moretti',
-      youtubeId: 'bsgln3b1mOc'
-    };
-
-    // -------------------------
-    // WhatsApp (centralizzato + validation)
-    // -------------------------
-    function sanitizeDigits(s){ return (s || '').replace(/\D/g, ''); }
-    const waNum = sanitizeDigits(CFG.whatsappNumber);
-    const waOk = /^[0-9]{8,15}$/.test(waNum);
-
-    function waLink(message){
-      const txt = encodeURIComponent(message || '');
-      return 'https://wa.me/' + waNum + '?text=' + txt;
-    }
-
-    const waTop = document.getElementById('waTop');
-    const waSticky = document.getElementById('waSticky');
-
-    if(waTop){
-      waTop.href = waOk ? waLink(CFG.whatsappMsgTop) : 'https://www.whatsapp.com/';
-      if(!waOk) waTop.title = 'Numero WhatsApp non configurato';
-    }
-    if(waSticky){
-      waSticky.href = waOk ? waLink(CFG.whatsappMsgSticky) : 'https://www.whatsapp.com/';
-      if(!waOk) waSticky.title = 'Numero WhatsApp non configurato';
-    }
-
-    // -------------------------
-    // Instagram deep link robusto + hardening username
-    // -------------------------
-    const igAnchor = document.querySelector('.ig-open');
-    if(igAnchor){
-      const rawUser = (igAnchor.getAttribute('data-ig') || CFG.instagramUser).trim();
-      const okUser = /^[a-zA-Z0-9._]{1,30}$/.test(rawUser);
-      const user = okUser ? rawUser : CFG.instagramUser;
-
-      const web = 'https://www.instagram.com/' + user + '/';
-      const ua = navigator.userAgent || '';
-      const isAndroid = /Android/i.test(ua);
-      const isIOS = /iPhone|iPad|iPod/i.test(ua);
-
-      igAnchor.href = web;
-
-      igAnchor.addEventListener('click', function(e){
-        e.preventDefault();
-        const fallback = () => { window.location.href = web; };
-
-        if(isIOS){
-          const ios = 'instagram://user?username=' + encodeURIComponent(user);
-          const t = setTimeout(fallback, 900);
-          window.location.href = ios;
-          window.addEventListener('pagehide', () => clearTimeout(t), { once:true });
-          window.addEventListener('blur', () => clearTimeout(t), { once:true });
-          return;
-        }
-
-        if(isAndroid){
-          const intent = 'intent://www.instagram.com/' + encodeURIComponent(user) +
-            '/#Intent;package=com.instagram.android;scheme=https;end';
-          const t = setTimeout(fallback, 900);
-          window.location.href = intent;
-          window.addEventListener('pagehide', () => clearTimeout(t), { once:true });
-          window.addEventListener('blur', () => clearTimeout(t), { once:true });
-          return;
-        }
-
-        fallback();
-      });
-    }
-
-    // -------------------------
-    // vCard download (cross-device)
-    // -------------------------
-    const btn = document.getElementById('saveContact');
-    if(btn){
-      const vcard =
-`BEGIN:VCARD
-VERSION:3.0
-N:Moretti;Azienda Agricola;;;
-FN:Azienda Agricola Moretti
-ORG:Azienda Agricola Moretti
-TITLE:Produzione e Forniture Funghi
-TEL;TYPE=WORK,VOICE:+390688936064
-EMAIL;TYPE=WORK:azienda.moretti@libero.it
-ADR;TYPE=WORK:;;Via Paolo Mercuri 23;Marino;RM;00047;Italia
-URL:https://aziendamoretti.com/
-URL:https://www.instagram.com/azienda_agricola_moretti/
-URL:https://www.facebook.com/p/Azienda-Agricola-Moretti-100054240050633/
-URL:https://www.tiktok.com/@aziendamoretti
-URL:https://aziendamoretti.com/pages/collaborazioni
-END:VCARD`;
-
-      btn.addEventListener('click', function(){
-        const ua = navigator.userAgent || '';
-        const isIOS = /iPhone|iPad|iPod/i.test(ua);
-
-        if(isIOS){
-          window.location.href = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
-          return;
-        }
-
-        try{
-          const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = 'Azienda_Agricola_Moretti.vcf';
-          a.rel = 'noopener';
-          document.body.appendChild(a);
-          a.click();
-
-          setTimeout(() => {
-            URL.revokeObjectURL(url);
-            a.remove();
-          }, 800);
-        }catch(e){
-          window.location.href = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
-        }
-      });
-    }
-
-    // -------------------------
-    // ✅ VIDEO FIX: embed più compatibile + origin + fallback YouTube sempre
-    // -------------------------
-    const loadBtn = document.getElementById('loadVideo');
-    const ytFallback = document.getElementById('ytFallback');
-
-    if(loadBtn){
-      // Aggiorna fallback link sempre coerente
-      const watchUrl = 'https://www.youtube.com/watch?v=' + encodeURIComponent(CFG.youtubeId);
-      if(ytFallback) ytFallback.href = watchUrl;
-
-      loadBtn.addEventListener('click', function(){
-        const container = loadBtn.parentElement;
-        const yt = (CFG.youtubeId || '').trim();
-
-        const origin = encodeURIComponent(window.location.origin);
-
-        // Embed standard (più compatibile su iOS/Android/desktop)
-        const embedUrl =
-          'https://www.youtube.com/embed/' + encodeURIComponent(yt) +
-          '?autoplay=1&rel=0&modestbranding=1&playsinline=1&origin=' + origin;
-
-        const iframe = document.createElement('iframe');
-        iframe.src = embedUrl;
-        iframe.title = 'Azienda Agricola Moretti';
-        iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share';
-        iframe.allowFullscreen = true;
-        iframe.loading = 'lazy';
-        iframe.referrerPolicy = 'origin-when-cross-origin';
-
-        container.innerHTML = '';
-        container.appendChild(iframe);
-      });
-    }
-  })();
-  </script>
+  </nav>
 </body>
 </html>
